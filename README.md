@@ -8,7 +8,8 @@ This is a simple API with admin view to add & delete JKT48 members . It is built
 4. Copy .env.example to .env
 5. Run `php artisan key:generate`
 6. Run `php artisan migrate`
-7. Run `php artisan serve`
+7. Run `php artisan db:seed`
+8. Run `php artisan serve`
 
 ## Usage
 1. Open a web browser and navigate to `http://localhost:8000`
