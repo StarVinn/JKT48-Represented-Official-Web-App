@@ -12,7 +12,7 @@ This is a simple API with admin view to add & delete JKT48 members . It is built
 8. Run `php artisan serve`
 
 ## Usage
-1. Open a web browser and navigate to `http://localhost:8000`
+1. Open a web browser and navigate to `http://127.0.0.1:8000/`
 2. In the admin view, you can add new JKT48 members
 3. You can also view all existing members
 4. You can also delete existing members
