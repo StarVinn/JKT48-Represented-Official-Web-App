@@ -24,3 +24,7 @@ This is a simple API with admin view to add & delete JKT48 members . It is built
 - Creates a new JKT48 member
 ### DELETE /api/members/{id}
 - Deletes a single JKT48 member by ID
+
+
+## Message
+This API is a part of an ongoing development journey. I am committed to continuously improving and expanding its features to meet evolving needs and deliver better functionality over time. Regular updates will be made to ensure it remains relevant, reliable, and aligned with the best development practices. Your feedback and support are highly appreciated as I strive to make this API even more powerful and efficient in the future.
