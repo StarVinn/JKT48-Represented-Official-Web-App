@@ -1,10 +1,14 @@
+@extends('layouts.app')
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Daftar Member</title>
+    
 </head>
 <body>
-    <h1>Daftar Member</h1>
+
+    @section('content')
+    <h4>Welcome.. {{ Auth::user()->name }}</h4>    <h1>Daftar Member</h1>
     <a href="{{ route('members.createMultiple') }}">Tambah Member</a>
 
     <br><br>
@@ -34,7 +38,7 @@
             <tr><td colspan="9">Loading data...</td></tr>
         </tbody>
     </table>
-
+    @endsection
     <script>
         function loadMembers() {
             fetch('/api/members')
