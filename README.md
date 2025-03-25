@@ -2,7 +2,7 @@
 ## Description
 This is a simple API with admin view to add & delete JKT48 members . It is built using Laravel 11 
 ## Installation
-1. Clone the repository
+1. Clone the repository `git clone https://github.com/StarVinn/JKT48-Represented-Official-Website.git`
 2. Run `composer install`
 3. Run `touch .env`
 4. Copy .env.example to .env
