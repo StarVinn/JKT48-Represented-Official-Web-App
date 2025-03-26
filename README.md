@@ -14,9 +14,10 @@ This is a simple API with admin view to add & delete JKT48 members . It is built
 
 ## Usage
 1. Open a Web Browser or Postman and navigate to `http://127.0.0.1:8000/`
-2. In the admin view, you can add new JKT48 members
-3. You can also view all existing members
-4. You can also delete existing members
+2. You have to login or register 
+3. After login you can see all JKT48 members
+4. If you want to add new member you can login as admin(check example on AdminSeeder.php)
+
 
 ## API Endpoints
 ### GET /api/members

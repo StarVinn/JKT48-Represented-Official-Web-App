@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>User Dashboard</title>
 </head>
 <body>
 
@@ -14,7 +14,6 @@
         <h1>User Dashboard</h1>
         <p>Selamat datang, {{ Auth::user()->name }}!</p>
     </div>
-    <h1>Hello</h1>
     @endsection
 
     

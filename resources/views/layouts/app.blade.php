@@ -15,7 +15,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            @auth
+                @auth
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
