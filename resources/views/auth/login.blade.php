@@ -7,11 +7,14 @@
     <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>Document</title>
+    <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="flex justify-center items-center min-h-screen bg-gradient-to-b from-red-700 to-pink-300">
     <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+        <a href="{{ url('/') }}" class="mb-4 inline-block bg-gray-300 text-gray-700 font-bold py-1 px-3 rounded-lg">
+            ← Back
+        </a>
         <h2 class="text-2xl font-bold text-center text-red-600">Login</h2>
         <p class="text-center text-sm text-gray-500 mb-4">"Dukung dengan hati, nikmati setiap momen, dan biarkan semangat mereka menginspirasi langkahmu."</p>
         
@@ -38,5 +41,3 @@
     </div>
 </body>
 </html>
-
-

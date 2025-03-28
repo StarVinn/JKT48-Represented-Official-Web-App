@@ -8,34 +8,35 @@
 <body>
 
     @section('content')
-    <h4>Welcome.. {{ Auth::user()->name }}</h4>    <h1>Daftar Member</h1>
-    <a href="{{ route('members.createMultiple') }}">Tambah Member</a>
+    <h4 class="text-lg font-bold">Welcome.. {{ Auth::user()->name }}</h4> 
+    <h1 class="text-3xl font-bold mb-4">Daftar Member</h1>
+    <a href="{{ route('members.createMultiple') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Tambah Member</a>
 
     <br><br>
     <!-- Dropdown Sort -->
-    <label>Urutkan Nama:</label>
-    <select id="sortSelect" onchange="loadMembers()">
+    <label class="block text-gray-700 text-sm font-bold mb-2">Urutkan Nama:</label>
+    <select id="sortSelect" onchange="loadMembers()" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
         <option value="az">A-Z</option>
         <option value="za">Z-A</option>
     </select>
 
-    <table border="1" cellpadding="10" cellspacing="0">
+    <table class="table-auto w-full">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Foto</th>
-                <th>Nama</th>
-                <th>Tanggal Lahir</th>
-                <th>Golongan Darah</th>
-                <th>Horoskop</th>
-                <th>Tinggi Badan</th>
-                <th>Nama Panggilan</th>
-                <th>Role</th>
-                <th>Aksi</th>
+                <th class="px-4 py-2">ID</th>
+                <th class="px-4 py-2">Foto</th>
+                <th class="px-4 py-2">Nama</th>
+                <th class="px-4 py-2">Tanggal Lahir</th>
+                <th class="px-4 py-2">Golongan Darah</th>
+                <th class="px-4 py-2">Horoskop</th>
+                <th class="px-4 py-2">Tinggi Badan</th>
+                <th class="px-4 py-2">Nama Panggilan</th>
+                <th class="px-4 py-2">Role</th>
+                <th class="px-4 py-2">Aksi</th>
             </tr>
         </thead>
         <tbody id="member-table-body">
-            <tr><td colspan="9">Loading data...</td></tr>
+            <tr><td colspan="9" class="px-4 py-2">Loading data...</td></tr>
         </tbody>
     </table>
     @endsection
@@ -70,32 +71,32 @@
                         data.data.forEach(member => {
                             const row = document.createElement('tr');
                             row.innerHTML = `
-                                <td>${member.id}</td>
-                                <td>${member.foto ? `<img src="/storage/foto/${member.foto}" width="80" class="img-thumbnail" alt="Foto">` : 'Tidak ada foto'}</td>
-                                <td>${member.name}</td>
-                                <td>${member.tanggal_lahir}</td>
-                                <td>${member.golongan_darah}</td>
-                                <td>${member.horoskop}</td>
-                                <td>${member.tinggi_badan} cm</td>
-                                <td>${member.nama_panggilan}</td>
-                                <td>
-                                    <span style="padding:5px; border-radius:5px; background:${member.role === 'trainee' ? '#ffc107' : '#28a745'}; color:white;">
+                                <td class="px-4 py-2">${member.id}</td>
+                                <td class="px-4 py-2">${member.foto ? `<img src="/storage/foto/${member.foto}" width="80" class="rounded" alt="Foto">` : 'Tidak ada foto'}</td>
+                                <td class="px-4 py-2">${member.name}</td>
+                                <td class="px-4 py-2">${member.tanggal_lahir}</td>
+                                <td class="px-4 py-2">${member.golongan_darah}</td>
+                                <td class="px-4 py-2">${member.horoskop}</td>
+                                <td class="px-4 py-2">${member.tinggi_badan} cm</td>
+                                <td class="px-4 py-2">${member.nama_panggilan}</td>
+                                <td class="px-4 py-2">
+                                    <span class="px-2 py-1 rounded ${member.role === 'trainee' ? 'bg-yellow-400' : 'bg-green-500'} text-white">
                                         ${member.role === 'trainee' ? 'Trainee' : 'Anggota'}
                                     </span>
                                 </td>
-                                <td>
-                                    <button onclick="deleteMember(${member.id})" class="btn btn-danger btn-sm">Hapus</button>
+                                <td class="px-4 py-2">
+                                    <button onclick="deleteMember(${member.id})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Hapus</button>
                                 </td>
                             `;
                             tableBody.appendChild(row);
                         });
                     } else {
-                        tableBody.innerHTML = '<tr><td colspan="9">Tidak ada data member.</td></tr>';
+                        tableBody.innerHTML = '<tr><td colspan="9" class="px-4 py-2">Tidak ada data member.</td></tr>';
                     }
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    document.getElementById('member-table-body').innerHTML = '<tr><td colspan="9">Gagal mengambil data.</td></tr>';
+                    document.getElementById('member-table-body').innerHTML = '<tr><td colspan="9" class="px-4 py-2">Gagal mengambil data.</td></tr>';
                 });
         }
 

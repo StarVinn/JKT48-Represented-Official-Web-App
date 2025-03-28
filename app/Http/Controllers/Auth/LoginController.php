@@ -34,7 +34,7 @@ class LoginController extends Controller
 
             // Redirect berdasarkan role
             return Auth::user()->isAdmin() 
-                ? redirect()->route('members.index') 
+                ? redirect()->route('admin.index') 
                 : redirect()->route('user.dashboard');
         }
 
@@ -48,6 +48,6 @@ class LoginController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/login');
+        return redirect('/');
     }
 }

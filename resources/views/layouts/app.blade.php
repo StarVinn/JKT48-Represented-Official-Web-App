@@ -5,36 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Member App</title>
 
-    <!-- Bootstrap CSS via CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-        <div class="container">
-            <a class="navbar-brand" href="{{ route('members.index') }}">MemberApp</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <nav class="bg-red-900 text-white p-4">
+        <div class="container mx-auto flex justify-between">
+            <img class="w-10 h-15" src="{{ url('logo.jpg') }}" alt="JKT48 Logo">
+            <div class="hidden md:flex items-center">
                 @auth
-                    <li class="nav-item">
-                        <form action="{{ route('logout') }}" method="POST">
-                            @csrf
-                            <button type="submit" class="btn btn-danger btn-sm">Logout</button>
-                        </form>
-                    </li>
+                    <form action="{{ route('logout') }}" method="POST" class="ml-4">
+                        @csrf
+                        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Logout</button>
+                    </form>
                 @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
-                    </li>
+                    <a class="text-white hover:text-gray-300 ml-4" href="{{ route('login') }}">Login</a>
                 @endauth
+            </div>
         </div>
     </nav>
 
-    <main class="container">
+    <main class="container mx-auto p-4">
         @yield('content')
     </main>
-
-    <!-- Bootstrap JS via CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

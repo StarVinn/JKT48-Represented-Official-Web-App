@@ -12,7 +12,7 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if (!Auth::check() || Auth::user()->role !== 'admin') {
-            return redirect('/home')->with('error', 'Akses ditolak!');
+            return redirect('/')->with('error', 'Akses ditolak!');
         }
 
         return $next($request);

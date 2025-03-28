@@ -10,6 +10,8 @@ use App\Http\Controllers\Auth\RegisterController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/explore', [MemberController::class, 'explore'])->name('explore');
 // Register & Login Routes
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
@@ -28,19 +30,11 @@ Route::middleware(['auth'])->group(function () {
 // Admin Dashboard
 Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/admin', function () {
-        return view('members.index');
-    })->name('members.index');
+    return view('admin.index'); // Or any appropriate view
+    })->name('admin.index'); // Change name to avoid conflict
 
-    Route::get('/create', function () {
-    return view('members.create');
-
-    })->name('members.create');
-    Route::get('/edit', function () {
-        return view('members.edit');
-    })->name('members.edit');
-
-Route::get('/members/create-multiple', [MemberController::class, 'createMultiple'])->name('members.createMultiple');
-Route::post('/members/store-multiple', [MemberController::class, 'storeMultiple'])->name('members.storeMultiple');
+    Route::get('/members/create-multiple', [MemberController::class, 'createMultiple'])->name('members.createMultiple');
+    Route::post('/members/store-multiple', [MemberController::class, 'storeMultiple'])->name('members.storeMultiple');
 });
 Route::middleware([RedirectIfAuthenticated::class])->group(function () {
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');

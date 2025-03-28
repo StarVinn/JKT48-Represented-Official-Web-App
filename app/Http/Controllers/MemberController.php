@@ -9,11 +9,15 @@ class MemberController extends Controller
 {
     public function index()
     {
-        $members = Member::all();
+        $member = Member::all();
         return response()->json([
             'success' => true,
-            'data' => $members
+            'data' => $member
         ]);
+    }
+    public function explore(){
+        $members = Member::all();
+        return view('explore', compact('members'));
     }
     public function createMultiple()
     {
