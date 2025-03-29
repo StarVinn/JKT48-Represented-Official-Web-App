@@ -7,31 +7,72 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            background: linear-gradient(rgba(220, 38, 38, 0.5), rgba(220, 38, 38, 0.5)),
-                        url('background.jpg') repeat;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-size: cover;
             background-position: center;
-            transition: background-image 1s ease-in-out;
+            z-index: -1;
+            opacity: 1;
+            transition: opacity 2s ease-in-out;
         }
     </style>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const images = [
                 'background.jpg',
                 'background2.jpg',
                 'background3.jpg',
                 'background4.jpg',
                 'background5.jpg',
-                'background6.jpg'
+                'background6.jpg',
+                'background7.jpg',
             ];
             let index = 0;
-            
-            setInterval(() => {
+            const fadeDuration = 2000;
+
+            // Buat elemen gambar latar belakang
+            const backgroundImage = document.createElement('div');
+            backgroundImage.classList.add('background-image');
+            document.body.appendChild(backgroundImage);
+
+            function preloadImage(src, callback) {
+                const img = new Image();
+                img.onload = callback;
+                img.src = src;
+            }
+
+            function updateBackground() {
+                const nextImage = images[index];
+                preloadImage(nextImage, () => {
+                    backgroundImage.style.backgroundImage = `linear-gradient(rgba(220, 38, 38, 0.5), rgba(220, 38, 38, 0.5)), url('${nextImage}')`;
+                    backgroundImage.style.opacity = 1; // Tampilkan gambar baru
+                });
+            }
+
+            function changeBackground() {
+                backgroundImage.style.opacity = 0; // Mulai fade out
                 index = (index + 1) % images.length;
-                document.body.style.backgroundImage = `linear-gradient(rgba(220, 38, 38, 0.5), rgba(220, 38, 38, 0.5)), url('${images[index]}')`;
-            }, 5000); // Ganti gambar setiap 5 detik
+
+                setTimeout(updateBackground, fadeDuration);
+            }
+
+            // Tampilkan gambar pertama
+            updateBackground();
+            
+            // Interval untuk pergantian gambar
+            setInterval(changeBackground, fadeDuration * 2 + 1000);
         });
     </script>
+
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center text-white bg-red-700 bg-opacity-70">
     <header class="absolute top-4 left-4 flex items-center space-x-3">
