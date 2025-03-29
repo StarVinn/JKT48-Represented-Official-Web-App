@@ -34,7 +34,10 @@
                 <ul class="py-1 text-sm text-gray-700">
                     <li><a href="#" class="block py-2 px-4 hover:bg-gray-100">Profile</a></li>
                     <li><a href="#" class="block py-2 px-4 hover:bg-gray-100">Pengaturan</a></li>
-                    <li><a href="{{ route('logout') }}" class="block py-2 px-4 hover:bg-gray-100">Logout</a></li>
+                   <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button type="submit" class="block py-2 px-4 hover:bg-gray-100">Logout</button>
+                    </form>
                 </ul>
             </div>
         </div>
