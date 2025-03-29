@@ -8,14 +8,11 @@
     <title>User Dashboard</title>
 </head>
 <body>
-
+    
     @section('content')
-    <div class="container">
-        <h1>User Dashboard</h1>
+        <h1 class="text-3xl font-bold">User Dashboard</h1>
         <p>Selamat datang, {{ Auth::user()->name }}!</p>
-    </div>
     @endsection
 
-    
 </body>
 </html>

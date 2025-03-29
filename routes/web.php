@@ -25,6 +25,25 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/user/dashboard', function () {
         return view('user.dashboard');
     })->name('user.dashboard');
+    Route::get('/user/profile', function () {
+        return view('user.profile');
+    })->name('user.profile');
+    Route::get('/user/settings', function () {
+        return view('user.settings');
+    })->name('user.settings');
+    // web.php
+    Route::get('/partials/members', function () {
+        return view('partials.members');
+    });
+
+    Route::get('/partials/setlist', function () {
+        return view('partials.setlist');
+    });
+
+    Route::get('/partials/theater', function () {
+        return view('partials.theater');
+    });
+
 });
 
 // Admin Dashboard
