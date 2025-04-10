@@ -39,11 +39,16 @@
         <h2 class="text-2xl font-bold mb-4">Active Members</h2>
         <div class="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] gap-4">
             @foreach ($members as $member)
-                <div class="bg-white p-4 rounded-lg shadow-md">
-                    <img src="/storage/foto/{{ $member->foto }}" alt="Tidak Ada Foto" class="rounded-lg mb-2">
-                    <h3 class="font-bold">{{ $member->name }}</h3>
-                </div>
-            @endforeach
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                @php
+                    $fotoPath = public_path('storage/foto/' . $member->foto);
+                    $timestamp = file_exists($fotoPath) ? filemtime($fotoPath) : time();
+                @endphp
+                <img src="{{ asset('storage/foto/' . $member->foto) }}?v={{ $timestamp }}" alt="Tidak Ada Foto" class="rounded-lg mb-2">
+                <h3 class="font-bold">{{ $member->name }}</h3>
+            </div>
+        @endforeach
+
         </div>
     </section>
 
