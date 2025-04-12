@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar gradient-bg text-red-500 py-4 shadow-lg relative">
     <div class="container mx-auto flex justify-between items-center px-6">
-        <a href="#" class="flex items-center">
+        <a href="{{ route('user.dashboard') }}" class="flex items-center">
             <img src="{{ url('logo.jpg') }}" alt="Logo" class="w-12 h-15 mr-2">
             <span class="text-lg font-bold">JKT48 Fanmade Website</span>
         </a>
@@ -32,11 +32,11 @@
             </button>
             <div id="dropdown-menu" class="hidden z-50 w-44 bg-white rounded divide-y divide-gray-100 shadow absolute top-full right-0">
                 <ul class="py-1 text-sm text-gray-700">
-                    <li><a href="#" class="block py-2 px-4 hover:bg-gray-100">Profile</a></li>
-                    <li><a href="#" class="block py-2 px-4 hover:bg-gray-100">Pengaturan</a></li>
-                   <form action="{{ route('logout') }}" method="post">
+                    <li><a href="#" class="block py-2 px-4 w-full hover:bg-gray-100">Profile</a></li>
+                    <li><a href="#" class="block py-2 px-4 w-full hover:bg-gray-100">Pengaturan</a></li>
+                    <form action="{{ route('logout') }}" method="post">
                         @csrf
-                        <button type="submit" class="block py-2 px-4 hover:bg-gray-100">Logout</button>
+                        <button type="submit" class="block py-2 px-4 w-full text-left hover:bg-gray-100">Logout</button>
                     </form>
                 </ul>
             </div>
@@ -48,7 +48,8 @@
         @yield('content')
     </div>
 
-    <footer class="bg-gray-800 text-white p-4 text-center">
+    
+    <footer class="bg-gray-800 text-white p-4 text-center bottom-0 left-0 right-0">
         <p>&copy; 2025 JKT48 Fanmade. All rights reserved.</p>
     </footer>
 

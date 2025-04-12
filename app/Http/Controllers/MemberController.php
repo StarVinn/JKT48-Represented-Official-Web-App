@@ -4,21 +4,32 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Member;
+use Illuminate\Support\Facades\Cache;
+
 
 class MemberController extends Controller
 {
+    // Method to get all members with caching
+    private function getCachedMembers()
+    {
+        return Cache::remember('members_all', now()->addMinutes(10), function () {
+            return Member::all();
+        });
+    }
+
     public function index()
     {
-        $member = Member::all();
+        $member = $this->getCachedMembers();
         return response()->json([
             'success' => true,
             'data' => $member
         ]);
     }
     public function explore(){
-        $members = Member::all();
+        $members = $this->getCachedMembers();
         return view('explore', compact('members'));
     }
+
     public function createMultiple()
     {
         return view('members.create_multiple');
@@ -53,6 +64,8 @@ class MemberController extends Controller
         }
 
         $member->save();
+        
+        Cache::forget('members_all');
 
         return response()->json([
             'success' => true,
