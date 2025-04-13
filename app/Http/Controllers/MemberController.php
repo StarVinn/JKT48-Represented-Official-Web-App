@@ -18,6 +18,7 @@ class MemberController extends Controller
     }
 
     public function index()
+    // untuk menampilkan semua member di api
     {
         $member = $this->getCachedMembers();
         return response()->json([
@@ -26,8 +27,14 @@ class MemberController extends Controller
         ]);
     }
     public function explore(){
+    // menampilkan semua member di halaman explore
         $members = $this->getCachedMembers();
         return view('explore', compact('members'));
+    }
+    public function getMembers(){
+    // menampilkan semua member di halaman dashboard
+        $members = $this->getCachedMembers();
+        return view('partials.members', compact('members'));
     }
 
     public function createMultiple()

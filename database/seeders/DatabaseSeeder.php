@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Setlist;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -18,9 +19,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             MemberSeeder::class,
-        ]);
-        $this->call([
             AdminSeeder::class,
+            SetlistSeeder::class,
         ]);
+        
+        
     }
 }

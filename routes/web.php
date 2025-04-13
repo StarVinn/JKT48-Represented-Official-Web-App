@@ -32,9 +32,7 @@ Route::middleware(['auth'])->group(function () {
         return view('user.settings');
     })->name('user.settings');
     // web.php
-    Route::get('/partials/members', function () {
-        return view('partials.members');
-    });
+    Route::get('/partials/members', [MemberController::class, 'getMembers'])->name('partials.members');
 
     Route::get('/partials/setlist', function () {
         return view('partials.setlist');
