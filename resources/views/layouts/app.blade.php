@@ -12,6 +12,10 @@
     <nav class="bg-red-900 text-white p-4">
         <div class="container mx-auto flex justify-between">
             <img class="w-10 h-15" src="{{ url('logo.jpg') }}" alt="JKT48 Logo">
+            <ul class="flex items-center space-x-4">
+                <li><a href="{{ ('/admin') }}" class="text-white hover:text-red-500">Members</a></li>
+                <li><a href="{{ ('/admin/setlist') }}" class="text-white hover:text-red-500">Setlist</a></li>
+                <li><a href="{{ ('/admin/user') }}" class="text-white hover:text-red-500">Users</a></li>
             <div class="hidden md:flex items-center">
                 @auth
                     <form action="{{ route('logout') }}" method="POST" class="ml-4">

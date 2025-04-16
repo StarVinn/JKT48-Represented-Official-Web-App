@@ -38,6 +38,13 @@
     <tbody id="member-table-body">
         <tr><td colspan="9" class="px-4 py-2">Loading data...</td></tr>
     </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="9" class="px-4 py-2">
+                <a href="{{ route('members.export') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Download Excel</a>
+            </td>
+        </tr>
+    </tfoot>
 </table>
 @endsection
 
@@ -90,6 +97,7 @@
                             <td class="px-4 py-2">
                                 <button onclick="deleteMember(${member.id})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Hapus</button>
                             </td>
+                            
                         `;
                         tableBody.appendChild(row);
                     });

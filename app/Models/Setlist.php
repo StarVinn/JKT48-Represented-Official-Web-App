@@ -9,7 +9,7 @@ class Setlist extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'artist', 'production_year'];
+    protected $fillable = ['title', 'artist', 'production_year','image'];
 
     public function songs()
     {

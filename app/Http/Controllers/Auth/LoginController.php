@@ -28,6 +28,19 @@ class LoginController extends Controller
             'email' => 'required|email',
             'password' => 'required',
         ]);
+        // Cek apakah akun user ada di database
+        $user = User::where('email', $credentials['email'])->first();
+        if (!$user) {
+            return back()->withErrors([
+                'email' => 'Email tidak terdaftar.',
+            ])->withInput();
+        }
+        // Cek apakah password yang dimasukkan benar
+        if (!password_verify($credentials['password'], $user->password)) {
+            return back()->withErrors([
+                'email' => 'Email atau password salah.',
+            ])->withInput();
+        }
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
@@ -50,4 +63,5 @@ class LoginController extends Controller
         $request->session()->regenerateToken();
         return redirect('/');
     }
+    
 }

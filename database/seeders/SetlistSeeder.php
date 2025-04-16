@@ -20,6 +20,7 @@ public function run(): void
                 'title' => 'Pajama Drive',
                 'artist' => 'JKT48',
                 'production_year' => 2012,
+                'image' => 'pajama_drive.jpg',
             ],
             'songs' => [
                 ['title' => 'Hari Pertama (Shonichi)', 'track_number' => 1, 'duration' => '03:45'],

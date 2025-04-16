@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\SetlistController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\Auth\RegisterController;
 
@@ -34,9 +35,7 @@ Route::middleware(['auth'])->group(function () {
     // web.php
     Route::get('/partials/members', [MemberController::class, 'getMembers'])->name('partials.members');
 
-    Route::get('/partials/setlist', function () {
-        return view('partials.setlist');
-    });
+    Route::get('/partials/setlist', [SetlistController::class, 'getSetlist'])->name('partials.setlists');
 
     Route::get('/partials/theater', function () {
         return view('partials.theater');
@@ -46,12 +45,19 @@ Route::middleware(['auth'])->group(function () {
 
 // Admin Dashboard
 Route::middleware([AdminMiddleware::class])->group(function () {
-    Route::get('/admin', function () {
-    return view('admin.index'); // Or any appropriate view
-    })->name('admin.index'); // Change name to avoid conflict
-
     Route::get('/members/create-multiple', [MemberController::class, 'createMultiple'])->name('members.createMultiple');
     Route::post('/members/store-multiple', [MemberController::class, 'storeMultiple'])->name('members.storeMultiple');
+    Route::get('/members/download', [MemberController::class, 'export'])->name('members.export');
+    Route::get('/admin', function () {
+        return view('admin.index'); // Or any appropriate view
+    })->name('admin.index'); // Change name to avoid conflict
+    Route::get('/admin/setlist', function () {
+        return view('admin.setlist');
+    })->name('admin.setlist');
+    Route::get('/admin/songs', function () {
+        return view('admin.songs');
+    })->name('admin.songs');
+
 });
 Route::middleware([RedirectIfAuthenticated::class])->group(function () {
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');

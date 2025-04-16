@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Member;
+use Illuminate\Http\Request;
+use App\Exports\MembersExport;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Cache;
 
 
@@ -35,6 +37,10 @@ class MemberController extends Controller
     // menampilkan semua member di halaman dashboard
         $members = $this->getCachedMembers();
         return view('partials.members', compact('members'));
+    }
+    public function export() 
+    {
+        return Excel::download(new MembersExport, 'members.xlsx');
     }
 
     public function createMultiple()

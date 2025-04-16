@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('artist');
             $table->string('production_year');
+            $table->string('image');
             $table->timestamps();
         });
     }
