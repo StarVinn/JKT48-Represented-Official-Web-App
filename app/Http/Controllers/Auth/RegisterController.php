@@ -17,6 +17,7 @@ class RegisterController extends Controller
 
     public function register(Request $request)
     {
+        // Validasi data yang diterima dari form registrasi
         $validatedData = $request->validate([
             'name' => ['required', 'min:4'],
             'email' => ['required', 'email', 'unique:users,email'], // Pastikan email unik

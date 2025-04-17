@@ -11,6 +11,9 @@ class LoginController extends Controller
 {
     public function showLoginForm()
     {
+        // cek apakah user sudah login
+        // jika sudah login, redirect ke halaman dashboard
+        // jika belum login, tampilkan halaman login
        if (Auth::check()) {
         // Jika user sudah login di tab lain, logout paksa
         Auth::logout();
@@ -58,6 +61,7 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
+        // Logout user
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();

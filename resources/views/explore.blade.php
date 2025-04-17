@@ -21,17 +21,26 @@
     </section>
 
     <section class="p-6 bg-white">
-        <h2 class="text-2xl font-bold mb-4">Theater & Setlist</h2>
+        <h2 class="text-2xl font-bold mb-4">Theater JKT48</h2>
         <div class="flex gap-4">
-            <img src="/images/theater.jpg" alt="JKT48 Theater" class="w-1/2 rounded-lg shadow-md">
-            <div>
-                <h3 class="text-lg font-bold">Setlist Populer</h3>
-                <ul class="list-disc list-inside">
-                    <li>Pajama Drive</li>
-                    <li>Renai Kinshi Jourei</li>
-                    <li>Dareka no Tame ni</li>
-                </ul>
-            </div>
+            <img src="{{ asset('storage/foto/theater.jpg') }}" alt="JKT48 Theater" class="w-1/4 rounded-lg shadow-md">
+            <p class="text-gray-700">Teater JKT48 terletak di fX Sudirman, Jakarta. Teater ini menjadi tempat pertunjukan harian bagi member JKT48
+                dan merupakan tempat di mana penggemar dapat melihat penampilan langsung dari idola mereka. Dengan kapasitas yang terbatas, setiap pertunjukan menjadi momen spesial bagi penggemar untuk berinteraksi dengan member.
+            </p>
+            {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3496.3311301294607!2d106.80133567439448!3d-6.2246637609616835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14e455ccd9f%3A0xd635e33c7c001b3d!2sFX%20Sudirman!5e1!3m2!1sid!2sid!4v1744899634157!5m2!1sid!2sid" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
+            
+        </div>
+    </section>
+
+    <section class="p-6 bg-white">
+        <h2 class="text-2xl font-bold mb-4">Setlist</h2>
+        <div class="grid grid-cols-[repeat(auto-fit,_minmax(130px,_1fr))]">
+            @foreach ($setlists as $setlist)
+                <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+                    <img src="{{ asset('storage/foto/' . $setlist->image) }}" alt="Tidak Ada Foto" class="rounded-lg mb-2 w-40 h-40">
+                    <h3 class="font-bold">{{ $setlist->title }}</h3>
+                </div>
+            @endforeach
         </div>
     </section>
 
@@ -39,18 +48,14 @@
         <h2 class="text-2xl font-bold mb-4">Active Members</h2>
         <div class="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] gap-4">
             @foreach ($members as $member)
-            <div class="bg-white p-4 rounded-lg shadow-md">
-                @php
-                    $fotoPath = public_path('storage/foto/' . $member->foto);
-                    $timestamp = file_exists($fotoPath) ? filemtime($fotoPath) : time();
-                @endphp
-                <img src="{{ asset('storage/foto/' . $member->foto) }}?v={{ $timestamp }}" alt="Tidak Ada Foto" class="rounded-lg mb-2">
-                <h3 class="font-bold">{{ $member->name }}</h3>
-            </div>
-        @endforeach
-
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <img src="{{ asset('storage/foto/' . $member->foto) }}" alt="Tidak Ada Foto" class="rounded-lg mb-2">
+                    <h3 class="font-bold">{{ $member->name }}</h3>
+                </div>
+            @endforeach
         </div>
     </section>
+
 
     <section class="p-6 bg-white">
         <h2 class="text-2xl font-bold mb-4">Events & Activities</h2>

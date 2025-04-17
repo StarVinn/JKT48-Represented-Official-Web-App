@@ -7,12 +7,13 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\SetlistController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\JKT48Controller;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/explore', [MemberController::class, 'explore'])->name('explore');
+Route::get('/explore', [JKT48Controller::class,'index'])->name('explore');
 // Register & Login Routes
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);

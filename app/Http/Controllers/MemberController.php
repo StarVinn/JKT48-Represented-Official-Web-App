@@ -40,6 +40,7 @@ class MemberController extends Controller
     }
     public function export() 
     {
+        // Export all members to an Excel file
         return Excel::download(new MembersExport, 'members.xlsx');
     }
 
@@ -50,6 +51,7 @@ class MemberController extends Controller
 
     public function store(Request $request)
     {
+        // Validate the incoming request data
         $request->validate([
             'name' => 'required',
             'tanggal_lahir' => 'required',
@@ -69,7 +71,7 @@ class MemberController extends Controller
         $member->tinggi_badan = $request->tinggi_badan;
         $member->nama_panggilan = $request->nama_panggilan;
         $member->role = $request->role;
-
+        // Simpan foto jika ada
         if ($request->hasFile('foto')) {
             $filename = time() . '_' . $request->file('foto')->getClientOriginalName();
             $request->file('foto')->move(public_path('images'), $filename);
@@ -119,6 +121,7 @@ class MemberController extends Controller
     
     public function show($id)
     {
+        // Find the member by ID
         $member = Member::find($id);
         if (!$member) {
             return response()->json([
@@ -135,6 +138,7 @@ class MemberController extends Controller
 
     public function destroy($id)
     {
+        // Delete the member by ID
         $member = Member::find($id);
         if (!$member) {
             return response()->json([
