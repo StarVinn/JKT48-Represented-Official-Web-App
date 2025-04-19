@@ -8,6 +8,21 @@ use App\Http\Controllers\SetlistController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\JKT48Controller;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Response;
+
+Route::get('/foto/{filename}', function ($filename) {
+    $path = public_path('foto/' . $filename);
+
+    if (!File::exists($path)) {
+        abort(404);
+    }
+
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    return Response::make($file, 200)->header("Content-Type", $type);
+});
 
 Route::get('/', function () {
     return view('welcome');
