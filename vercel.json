@@ -8,6 +8,10 @@
         { "src": "/build/(.*)", "dest": "/public/build/" },
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
+    "rewrites": [
+    { "source": "/foto/(.*)", "destination": "/public/foto/$1" }
+],
+
     "public": true,
     "buildCommand": "vite build",
     "outputDirectory": "public",
