@@ -8,21 +8,7 @@ use App\Http\Controllers\SetlistController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\JKT48Controller;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Response;
 
-Route::get('/foto/{filename}', function ($filename) {
-    $path = public_path('foto/' . $filename);
-
-    if (!File::exists($path)) {
-        abort(404);
-    }
-
-    $file = File::get($path);
-    $type = File::mimeType($path);
-
-    return Response::make($file, 200)->header("Content-Type", $type);
-});
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,12 +16,13 @@ Route::get('/', function () {
 
 Route::get('/explore', [JKT48Controller::class,'index'])->name('explore');
 // Register & Login Routes
-Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-Route::post('/register', [RegisterController::class, 'register']);
-
-Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [LoginController::class, 'login']);
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::group(['middleware' => 'guest'], function(){
+    Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+    Route::post('/register', [RegisterController::class, 'register']);
+    Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [LoginController::class, 'login']);
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+});
 
 // User Dashboard
 Route::middleware(['auth'])->group(function () {
@@ -56,6 +43,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/partials/theater', function () {
         return view('partials.theater');
     });
+    Route::get('/user/detailmembers', [MemberController::class, 'detailmembers'])->name('user.detailmembers');
 
 });
 
@@ -65,8 +53,8 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::post('/members/store-multiple', [MemberController::class, 'storeMultiple'])->name('members.storeMultiple');
     Route::get('/members/download', [MemberController::class, 'export'])->name('members.export');
     Route::get('/admin', function () {
-        return view('admin.index'); // Or any appropriate view
-    })->name('admin.index'); // Change name to avoid conflict
+        return view('admin.index'); 
+    })->name('admin.index');
     Route::get('/admin/setlist', function () {
         return view('admin.setlist');
     })->name('admin.setlist');

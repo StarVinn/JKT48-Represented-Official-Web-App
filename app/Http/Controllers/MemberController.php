@@ -43,6 +43,12 @@ class MemberController extends Controller
         // Export all members to an Excel file
         return Excel::download(new MembersExport, 'members.xlsx');
     }
+    // public function detailmembers()
+    // {
+    //     // Get all members
+    //     $members = $this->getCachedMembers();
+    //     return view('user.detailmembers', compact('members'));
+    // }
 
     public function createMultiple()
     {
