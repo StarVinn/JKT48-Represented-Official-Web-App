@@ -392,7 +392,7 @@ class MemberSeeder extends Seeder
             "horoskop"=> "Virgo",
             "tinggi_badan"=> "163",
             "nama_panggilan"=> "Lana",
-            "role"=> "trainee",
+            "role"=> "anggota",
             "foto"=> "aurhel_alana.jpg",
         ],
         [
@@ -422,7 +422,7 @@ class MemberSeeder extends Seeder
             "horoskop"=> "Leo",
             "tinggi_badan"=> "157",
             "nama_panggilan"=> "Fritzy",
-            "role"=> "trainee",
+            "role"=> "anggota",
             "foto"=> "fritzy_rosmerian.jpg",
         ],
         [
@@ -484,16 +484,6 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Jemima",
             "role"=> "trainee",
             "foto"=> "Jemima_Evodie.jpg",
-        ],
-        [
-            "name"=> "Letycia Moreen",
-            "tanggal_lahir"=> "2010-06-07",
-            "golongan_darah"=> "O",
-            "horoskop"=> "Gemini",
-            "tinggi_badan"=> "160",
-            "nama_panggilan"=> "Moreen",
-            "role"=> "trainee",
-            "foto"=> "letycia_moreen.jpg",
         ],
         [
             "name"=> "Michelle Levia",
