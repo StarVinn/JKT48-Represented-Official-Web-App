@@ -40,7 +40,7 @@
                             <td class="border border-gray-300 px-4 py-2">${setlist.artist}</td>
                             <td class="border border-gray-300 px-4 py-2">${setlist.production_year}</td>
                             <td class="border border-gray-300 px-4 py-2">
-                                <a href="/admin/songs" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                                <a href="/admin/songs/${setlist.id}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                                     Show Songs
                                 </a>
                             </td>

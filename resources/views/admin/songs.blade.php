@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Daftar Songs dari Setlist 1</title>
+    <title>Daftar Songs dari Setlist {{ $setlistTitle }}</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="h-full">
     <div class="p-4 max-w-5xl mx-auto">
-        <h1 class="text-3xl font-bold mb-4">Daftar Songs dari Setlist 1</h1>
+        <h1 class="text-3xl font-bold mb-4">Daftar Songs dari Setlist {{ $setlistTitle }}</h1>
 
         <button onclick="window.history.back()" class="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
             Kembali
@@ -30,7 +30,7 @@
 
     <script>
         function loadSongs() {
-            fetch('/api/setlists/1')
+            fetch('/api/setlists/{{ $setlistId }}')
                 .then(response => response.json())
                 .then(data => {
                     const tableBody = document.getElementById('songs-body');

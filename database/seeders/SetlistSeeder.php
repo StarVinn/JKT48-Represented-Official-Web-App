@@ -43,12 +43,30 @@ public function run(): void
         ],
         [
             // untuk menambahkan setlist lain
-            /*'setlist' => [
-                'title' => 'Setlist Lain',
-                'artist' => 'Artis Lain',
-                'production_year' => 2023,
+            'setlist' => [
+                'title' => 'Renai Kinshi Jourei',
+                'artist' => 'JKT48',
+                'production_year' => 2012,
+                'image' => 'rkj.jpg',
             ],
-            'songs' => [],*/
+            'songs' => [
+                ['title' => 'Cahaya Panjang (Nagai Hikari)', 'track_number' => 1, 'duration' => '03:50'],
+                ['title' => 'Di Tengah Hujan Badai Tiba-Tiba (Squall no Aida ni)', 'track_number' => 2, 'duration' => '03:40'],
+                ['title' => 'Gadis SMA Putri Tidur (JK Nemurihime)', 'track_number' => 3, 'duration' => '03:55'],
+                ['title' => 'Jatuh Cinta Setiap Bertemu Denganmu (Kimi ni Au Tabi Koi wo Suru)', 'track_number' => 4, 'duration' => '04:00'],
+                ['title' => 'Malaikat Hitam (Kuroi Tenshi)', 'track_number' => 5, 'duration' => '03:45'],
+                ['title' => 'Virus Tipe Hati (Heart Gata Virus)', 'track_number' => 6, 'duration' => '03:30'],
+                ['title' => 'Aturan Anti Cinta (Renai Kinshi Jourei)', 'track_number' => 7, 'duration' => '04:10'],
+                ['title' => 'Tsundere!', 'track_number' => 8, 'duration' => '03:35'],
+                ['title' => 'Mawar Natal Musim Panas (Manatsu no Christmas Rose)', 'track_number' => 9, 'duration' => '04:05'],
+                ['title' => 'Switch', 'track_number' => 10, 'duration' => '03:50'],
+                ['title' => '109 (Marukyuu)', 'track_number' => 11, 'duration' => '03:40'],
+                ['title' => 'Jejak Awan Pesawat (Hikoukigumo)', 'track_number' => 12, 'duration' => '03:45'],
+                ['title' => 'Sneakers Waktu Itu (Ano Koro no Sneakers)', 'track_number' => 13, 'duration' => '04:00'],
+                ['title' => 'JKT Datang! (JKT Sanjou!)', 'track_number' => 14, 'duration' => '03:55'],
+                ['title' => 'Nafas Dalam Air Mata (Namida no Shinkokyuu)', 'track_number' => 15, 'duration' => '04:15'],
+                ['title' => 'Teriakan Berlian (Oogoe Diamond)', 'track_number' => 16, 'duration' => '04:20'],
+            ],
         ]
     ];
     // untuk menambahkan dengan foreach

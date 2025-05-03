@@ -58,8 +58,10 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/admin/setlist', function () {
         return view('admin.setlist');
     })->name('admin.setlist');
-    Route::get('/admin/songs', function () {
-        return view('admin.songs');
+    Route::get('/admin/songs/{id}', function ($id) {
+        $setlist = \App\Models\Setlist::find($id);
+        $setlistTitle = $setlist ? $setlist->title : 'Unknown Setlist';
+        return view('admin.songs', ['setlistId' => $id, 'setlistTitle' => $setlistTitle]);
     })->name('admin.songs');
 
 });
