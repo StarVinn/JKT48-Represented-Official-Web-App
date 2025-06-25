@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('nama_panggilan');
             $table->string('role')->default('trainee');
             $table->string('foto');
+            $table->string('twitter');
+            $table->string('instagram');
             $table->timestamps();
         });
     }

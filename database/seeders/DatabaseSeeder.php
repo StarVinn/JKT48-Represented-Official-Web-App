@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             MemberSeeder::class,
             AdminSeeder::class,
             SetlistSeeder::class,
+            UserSeeder::class,
         ]);
         
         

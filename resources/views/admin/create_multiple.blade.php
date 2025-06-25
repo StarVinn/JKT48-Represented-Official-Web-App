@@ -50,6 +50,8 @@
                 </select>
 
                 <input type="text" name="members[0][nama_panggilan]" placeholder="Nama Panggilan" required>
+                <input type="text" name="members[0][twitter]" placeholder="Twitter" required>
+                <input type="text" name="members[0][instagram]" placeholder="Instagram" required>
 
                 {{-- Dropdown Role --}}
                 <select name="members[0][role]" required>
@@ -115,6 +117,8 @@
                     </select>
 
                     <input type="text" name="members[${memberIndex}][nama_panggilan]" placeholder="Nama Panggilan" required>
+                    <input type="text" name="members[${memberIndex}][twitter]" placeholder="Twitter" required>
+                    <input type="text" name="members[${memberIndex}][instagram]" placeholder="Instagram" required>
 
                     <select name="members[${memberIndex}][role]" required>
                         <option value="anggota">Anggota</option>

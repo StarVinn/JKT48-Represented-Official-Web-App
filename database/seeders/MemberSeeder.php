@@ -24,6 +24,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Alya",
             "role"=> "anggota",
             "foto"=> "alya_amanda.jpg",
+            "twitter" => "AA_AlyaJKT48",
+            "instagram" => "jkt48.alya_",
         ],
         [
            "name"=> "Amanda Sukma",
@@ -34,6 +36,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Amanda",
             "role"=> "anggota",
             "foto"=> "amanda_sukma.jpg",
+            "twitter" => "PS_AmandaJKT48",
+            "instagram" => "jkt48.amanda.s",
         ],
         [
            "name"=> "Angelina Christy",
@@ -44,6 +48,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Christy",
             "role"=> "anggota",
             "foto"=> "angelina_christy.jpg",
+            "twitter" => "A_ChristyJKT48",
+            "instagram" => "jkt48.christy",
         ],
         [
            "name"=> "Anindya Ramadhani",
@@ -54,6 +60,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Anindya",
             "role"=> "anggota",
             "foto"=> "anindya_ramadhani.jpg",
+            "twitter" => "AR_AnindyaJKT48",
+            "instagram" => "jkt48.anindya_",
         ],
         [
            "name"=> "Aurellia",
@@ -64,6 +72,9 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Lia",
             "role"=> "anggota",
             "foto"=> "aurellia.jpg",
+            "twitter" => "AU_LiaJKT48",
+            "instagram" => "jkt48.aurellia_
+",
         ],
         [
             "name"=> "Aurhel Alana",
@@ -74,6 +85,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Lana",
             "role"=> "anggota",
             "foto"=> "aurhel_alana.jpg",
+            "twitter" => "AR_LanaJKT48",
+            "instagram" => "jkt48.lana.a",
         ],
         [
            "name"=> "Cathleen Nixie",
@@ -84,6 +97,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Cathy",
             "role"=> "anggota",
             "foto"=> "cathleen_nixie.jpg",
+            "twitter" => "N_CathyJKT48",
+            "instagram" => "jkt48.cathy",
         ],
         [
            "name"=> "Celline Thefani",
@@ -94,6 +109,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Elin",
             "role"=> "anggota",
             "foto"=> "celline_thefani.jpg",
+            "twitter" => "Elin_JKT48",
+            "instagram" => "jkt48.elin_",
         ],
         [
            "name"=> "Chelsea Davina",
@@ -104,6 +121,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Chelsea",
             "role"=> "anggota",
             "foto"=> "chelsea_davina.jpg",
+            "twitter" => "DC_ChelseaJKT48",
+            "instagram" => "jkt48.chelsea",
         ],
         [
            "name"=> "Cornelia Vanisa",
@@ -114,6 +133,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Oniel",
             "role"=> "anggota",
             "foto"=> "cornelia_vanisa.jpg",
+            "twitter" => "C_OnielJKT48",
+            "instagram" => "jkt48.oniel",
         ],
         [
             "name"=> "Cynthia Yaputera",
@@ -124,6 +145,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Cynthia",
             "role"=> "anggota",
             "foto"=> "cynthia_yaputera.jpg",
+            "twitter" => "Y_CynthiaJKT48",
+            "instagram" => "jkt48.cynthia",
         ],
         [
             "name"=> "Dena Natalia",
@@ -134,6 +157,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Danella",
             "role"=> "anggota",
             "foto"=> "dena_natalia.jpg",
+            "twitter" => "Danella_JKT48",
+            "instagram" => "jkt48.danella",
         ],
         [
             "name"=> "Desy Natalia",
@@ -144,6 +169,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Daisy",
             "role"=> "anggota",
             "foto"=> "desy_natalia.jpg",
+            "twitter" => "Daisy_JKT48",
+            "instagram" => "jkt48.daisy",
         ],
         [
             "name"=> "Febriola Sinambela",
@@ -154,6 +181,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Olla",
             "role"=> "anggota",
             "foto"=> "febriola_sinambela.jpg",
+            "twitter" => "F_OllaJKT48",
+            "instagram" => "jkt48.olla",
         ],
         [
             "name"=> "Feni Fitriyanti",
@@ -164,6 +193,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Feni",
             "role"=> "anggota",
             "foto"=> "feni_fitriyanti.jpg",
+            "twitter" => "F_FeniJKT48",
+            "instagram" => "jkt48feni",
         ],
         [
             "name"=> "Fiony Alveria",
@@ -174,6 +205,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Fiony",
             "role"=> "anggota",
             "foto"=> "fiony_alveria.jpg",
+            "twitter" => "A_FionyJKT48",
+            "instagram" => "jkt48.fiony",
         ],
         [
             "name"=> "Freya Jayawardana",
@@ -184,6 +217,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Freya",
             "role"=> "anggota",
             "foto"=> "freya_jayawardana.jpg",
+            "twitter" => "Freya_JKT48",
+            "instagram" => "jkt48.freya",
         ],
         [
             "name"=> "Fritzy Rosmerian",
@@ -194,6 +229,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Fritzy",
             "role"=> "anggota",
             "foto"=> "fritzy_rosmerian.jpg",
+            "twitter" => "RFritzy_JKT48",
+            "instagram" => "jkt48.fritzy.r",
         ],
         [
             "name"=> "Gabriela Abigail",
@@ -204,6 +241,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Ella",
             "role"=> "anggota",
             "foto"=> "gabriela_abigail.jpg",
+            "twitter" => "AM_EllaJKT48",
+            "instagram" => "jkt48.ella.a",
         ],
         [
             "name"=> "Gendis Mayrannisa",
@@ -214,6 +253,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Gendis",
             "role"=> "anggota",
             "foto"=> "gendis_mayrannisa.jpg",
+            "twitter" => "Gendis_JKT48",
+            "instagram" => "jkt48.gendis",
         ],
         [
             "name"=> "Gita Sekar Andarini",
@@ -224,6 +265,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Gita",
             "role"=> "anggota",
             "foto"=> "gita_sekar_andarini.jpg",
+            "twitter" => "A_GitaJKT48",
+            "instagram" => "jkt48gita",
         ],
         [
             "name"=> "Greesella Adhalia",
@@ -234,6 +277,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Gressel",
             "role"=> "anggota",
             "foto"=> "greesella_adhalia.jpg",
+            "twitter" => "Greesel_JKT48",
+            "instagram" => "jkt48.gressel",
         ],
         [
             "name"=> "Grace Octaviani",
@@ -244,6 +289,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Gracie",
             "role"=> "anggota",
             "foto"=> "grace_octaviani.jpg",
+            "twitter" => "Gracie_JKT48",
+            "instagram" => "jkt48.gracie",
         ],
         [
             "name"=> "Helisma Putri",
@@ -254,6 +301,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Eli",
             "role"=> "anggota",
             "foto"=> "helisma_putri.jpg",
+            "twitter" => "H_EliJKT48",
+            "instagram" => "jkt48.eli",
         ],
         [
             "name"=> "Indah Cahya",
@@ -264,6 +313,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Indah",
             "role"=> "anggota",
             "foto"=> "indah_cahya.jpg",
+            "twitter" => "C_IndahJKT48",
+            "instagram" => "jkt48indah_",
         ],
         [
             "name"=> "Indira Seruni",
@@ -274,6 +325,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Indira",
             "role"=> "anggota",
             "foto"=> "indira_seruni.jpg",
+            "twitter" => "SP_IndiraJKT48",
+            "instagram" => "jkt48.indira.s",
         ],
         [
             "name"=> "Jessica Chandra",
@@ -284,6 +337,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Jessi",
             "role"=> "anggota",
             "foto"=> "jessica_chandra.jpg",
+            "twitter" => "C_JessiJKT48",
+            "instagram" => "jkt48.jessi",
         ],
         [
             "name"=> "Jesslyn Elly",
@@ -294,6 +349,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Lyn",
             "role"=> "anggota",
             "foto"=> "jesslyn_elly.jpg",
+            "twitter" => "SE_LynJKT48",
+            "instagram" => "jkt48.lyn.s",
         ],
         [
             "name"=> "Kathrina Irene",
@@ -304,6 +361,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Kathrina",
             "role"=> "anggota",
             "foto"=> "kathrina_irene.jpg",
+            "twitter" => "I_KathrinaJKT48",
+            "instagram" => "jkt48.kathrina",
         ],
         [
             "name"=> "Lulu Salsabila",
@@ -314,6 +373,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Lulu",
             "role"=> "anggota",
             "foto"=> "lulu_salsabila.jpg",
+            "twitter" => "A_LuluJKT48",
+            "instagram" => "jkt48.lulu",
         ],
         [
             "name"=> "Marsha Lenathea",
@@ -324,6 +385,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Marsha",
             "role"=> "anggota",
             "foto"=> "marsha_lenathea.jpg",
+            "twitter" => "L_MarshaJKT48",
+            "instagram" => "jkt48.marsha",
         ],
         [
             "name"=> "Michelle Alexandra",
@@ -334,6 +397,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Michie",
             "role"=> "anggota",
             "foto"=> "michelle_alexandra.jpg",
+            "twitter" => "Michie_JKT48",
+            "instagram" => "jkt48.michie_",
         ],
         [
             "name"=> "Mutiara Azzahra",
@@ -344,6 +409,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Muthe",
             "role"=> "anggota",
             "foto"=> "mutiara_azzahra.jpg",
+            "twitter" => "A_MutheJKT48",
+            "instagram" => "jkt48.muthe_",
         ],
         [
             "name"=> "Raisha Syifa",
@@ -354,6 +421,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Raisha",
             "role"=> "anggota",
             "foto"=> "raisha_syifa.jpg",
+            "twitter" => "SW_RaishaJKT48",
+            "instagram" => "jkt48.raisha.s",
         ],
         [
             "name"=> "Shania Gracia",
@@ -364,6 +433,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Gracia",
             "role"=> "anggota",
             "foto"=> "shania_gracia.jpg",
+            "twitter" => "S_GraciaJKT48",
+            "instagram" => "jkt48gracia",
         ],
         [
             "name"=> "Abigail Rachel",
@@ -374,6 +445,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Aralie",
             "role"=> "trainee",
             "foto"=> "abigail_rachel.jpg",
+            "twitter" => "Aralie_JKT48",
+            "instagram" => "jkt48.aralie",
         ],
         [
             "name"=> "Adeline Wijaya",
@@ -384,6 +457,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Delynn",
             "role"=> "trainee",
             "foto"=> "adeline_wijaya.jpg",
+            "twitter" => "Delynn_JKT48",
+            "instagram" => "jkt48.delynn",
         ],
         [
             "name"=> "Astrella Virgiananda",
@@ -394,6 +469,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Virgi",
             "role"=> "trainee",
             "foto"=> "Astrella_Virgiananda.jpg",
+            "twitter" => "A_VirgiJKT48",
+            "instagram" => "virgi.jkt48",
         ],
         [
             "name"=> "Aulia Riza",
@@ -404,6 +481,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Auwia",
             "role"=> "trainee",
             "foto"=> "Aulia_Riza.jpg",
+            "twitter" => "Auwia_JKT48",
+            "instagram" => "auwia.jkt48",
         ],
         [
             "name"=> "Bong Aprilli",
@@ -414,6 +493,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Rilly",
             "role"=> "trainee",
             "foto"=> "Bong_Aprilli.jpg",
+            "twitter" => "Rilly_JKT48",
+            "instagram" => "rilly.jkt48_",
         ],
         [
             "name"=> "Catherina Vallencia",
@@ -424,6 +505,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Erine",
             "role"=> "trainee",
             "foto"=> "catherina_vallencia.jpg",
+            "twitter" => "CErine_JKT48",
+            "instagram" => "jkt48.erine",
         ],
         [
             "name"=> "Hagia Sopia",
@@ -434,6 +517,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Giaa",
             "role"=> "trainee",
             "foto"=> "Hagia_Sopia.jpg",
+            "twitter" => "Giaa_JKT48",
+            "instagram" => "giaa.jkt48",
         ],
         [
             "name"=> "Hillary Abigail",
@@ -444,6 +529,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Lily",
             "role"=> "trainee",
             "foto"=> "hillary_abigail.jpg",
+            "twitter" => "Lily_JKT48",
+            "instagram" => "jkt48.lily_",
         ],
         [
             "name"=> "Humaira Ramadhani",
@@ -454,6 +541,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Maira",
             "role"=> "trainee",
             "foto"=> "Humaira_Ramadhani.jpg",
+            "twitter" => "Maira_JKT48",
+            "instagram" => "maira.jkt48",
         ],
         [
             "name"=> "Jacqueline Immanuela",
@@ -464,6 +553,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Ekin",
             "role"=> "trainee",
             "foto"=> "Jacqueline_Immanuela.jpg",
+            "twitter" => "Ekin_JKT48",
+            "instagram" => "ekin.jkt48",
         ],
         [
             "name"=> "Jazzlyn Trisha",
@@ -474,6 +565,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Trisha",
             "role"=> "trainee",
             "foto"=> "jazzlyn_trisha.jpg",
+            "twitter" => "JTrisha_JKT48",
+            "instagram" => "jkt48.trisha",
         ],
         [
             "name"=> "Jemima Evodie",
@@ -484,6 +577,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Jemima",
             "role"=> "trainee",
             "foto"=> "Jemima_Evodie.jpg",
+            "twitter" => "JE_JemimaJKT48",
+            "instagram" => "jemima.jkt48",
         ],
         [
             "name"=> "Michelle Levia",
@@ -494,6 +589,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Levi",
             "role"=> "trainee",
             "foto"=> "michelle_levia.jpg",
+            "twitter" => "Levi_JKT48",
+            "instagram" => "jkt48.levi",
         ],
         [
             "name"=> "Mikaela Kusjanto",
@@ -504,6 +601,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Mikaela",
             "role"=> "trainee",
             "foto"=> "Mikaela_Kusjanto.jpg",
+            "twitter" => "M_MikaelaJKT48",
+            "instagram" => "mikaela.jkt48",
         ],
         [
             "name"=> "Nayla Suji",
@@ -514,6 +613,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Nayla",
             "role"=> "trainee",
             "foto"=> "nayla_suji.jpg",
+            "twitter" => "SNayla_JKT48",
+            "instagram" => "jkt48.nayla.s",
         ],
         [
             "name"=> "Nina Tutachia",
@@ -524,6 +625,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Nachia",
             "role"=> "trainee",
             "foto"=> "nina_tutachia.jpg",
+            "twitter" => "Nachia_JKT48",
+            "instagram" => "jkt48.nachia.t",
         ],
         [
             "name"=> "Nur Intan",
@@ -534,6 +637,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Intan",
             "role"=> "trainee",
             "foto"=> "Nur_Intan.jpg",
+            "twitter" => "N_IntanJKT48",
+            "instagram" => "intan.jkt48",
         ],
         [
             "name"=> "Oline Manuel",
@@ -544,6 +649,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Oline",
             "role"=> "trainee",
             "foto"=> "oline_manuel.jpg",
+            "twitter" => "M_OlineJKT48",
+            "instagram" => "jkt48.oline",
         ],
         [
             "name"=> "Regina Wilian",
@@ -554,6 +661,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Regie",
             "role"=> "trainee",
             "foto"=> "regina_wilian.jpg",
+            "twitter" => "RegieJKT48",
+            "instagram" => "jkt48.regie",
         ],
         [
             "name"=> "Ribka Budiman",
@@ -564,6 +673,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Ribka",
             "role"=> "trainee",
             "foto"=> "ribka_budiman.jpg",
+            "twitter" => "Ribka_JKT48",
+            "instagram" => "jkt48.ribka",
         ],
         [
             "name"=> "Shabilqis Naila",
@@ -574,6 +685,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Nala",
             "role"=> "trainee",
             "foto"=> "shabilqis_naila.jpg",
+            "twitter" => "Nala_JKT48",
+            "instagram" => "jkt48.nala",
         ],
         [
             "name"=> "Victoria Kimberly",
@@ -584,6 +697,8 @@ class MemberSeeder extends Seeder
             "nama_panggilan"=> "Kimmy",
             "role"=> "trainee",
             "foto"=> "victoria_kimberly.jpg",
+            "twitter" => "Kimmy_JKT48",
+            "instagram" => "jkt48.kimmy",
         ],
             
         ];

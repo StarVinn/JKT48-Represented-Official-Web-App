@@ -10,7 +10,12 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\JKT48Controller;
 
 
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/', function () {
+    if (Auth::check()) {
+        return redirect()->route('user.dashboard');
+    }
     return view('welcome');
 });
 
@@ -44,6 +49,7 @@ Route::middleware(['auth'])->group(function () {
         return view('partials.theater');
     });
     Route::get('/user/detailmembers', [MemberController::class, 'detailmembers'])->name('user.detailmembers');
+    Route::get('/user/detailmembers/{id}', [MemberController::class, 'detailmember'])->name('user.detailmember');
 
 });
 

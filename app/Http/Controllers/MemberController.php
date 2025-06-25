@@ -43,12 +43,16 @@ class MemberController extends Controller
         // Export all members to an Excel file
         return Excel::download(new MembersExport, 'members.xlsx');
     }
-    // public function detailmembers()
-    // {
-    //     // Get all members
-    //     $members = $this->getCachedMembers();
-    //     return view('user.detailmembers', compact('members'));
-    // }
+    public function detailmembers()
+    {
+        // Redirect to a default member detail or show a message
+        $firstMember = Member::first();
+        if ($firstMember) {
+            return redirect()->route('user.detailmember', ['id' => $firstMember->id]);
+        } else {
+            abort(404, 'No members found');
+        }
+    }
 
     public function createMultiple()
     {
@@ -67,6 +71,8 @@ class MemberController extends Controller
             'nama_panggilan' => 'required',
             'foto' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
             'role' => 'required',
+            'twitter' => 'required',
+            'instagram' => 'required',
         ]);
 
         $member = new Member();
@@ -77,6 +83,8 @@ class MemberController extends Controller
         $member->tinggi_badan = $request->tinggi_badan;
         $member->nama_panggilan = $request->nama_panggilan;
         $member->role = $request->role;
+        $member->twitter = $request->twitter;
+        $member->twitter = $request->twitter;
         // Simpan foto jika ada
         if ($request->hasFile('foto')) {
             $filename = time() . '_' . $request->file('foto')->getClientOriginalName();
@@ -109,6 +117,8 @@ class MemberController extends Controller
             $member->tinggi_badan = $data['tinggi_badan'];
             $member->nama_panggilan = $data['nama_panggilan'];
             $member->role = $data['role'];
+            $member->twitter = $data['twitter'];
+            $member->instagram = $data['instagram'];
 
             // Simpan foto jika ada
             if (isset($data['foto']) && $request->hasFile("members.$index.foto")) {
@@ -163,5 +173,14 @@ class MemberController extends Controller
             'success' => true,
             'message' => 'Member deleted successfully'
         ]);
+    }
+
+    public function detailmember($id)
+    {
+        $member = Member::find($id);
+        if (!$member) {
+            abort(404, 'Member not found');
+        }
+        return view('user.detailmembers', compact('member'));
     }
 }

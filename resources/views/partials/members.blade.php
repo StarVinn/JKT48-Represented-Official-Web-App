@@ -11,10 +11,12 @@
                                 $fotoPath = public_path('storage/foto/' . $member->foto);
                                 $timestamp = file_exists($fotoPath) ? filemtime($fotoPath) : time();
                             @endphp
-                            <a href="{{ route('user.detailmembers') }}">
+                            <a href="{{ route('user.detailmember', ['id' => $member->id]) }}">
                                 <img src="{{ asset('storage/foto/' . $member->foto) }}?v={{ $timestamp }}" alt="Tidak Ada Foto" class="rounded-lg w-25 h-30 mb-2 hover:scale-110 transition duration-300">
                             </a>
-                            <h3 class="font-bold text-red-500">{{ $member->name }}</h3>
+                            <a href="{{ route('user.detailmember', ['id' => $member->id]) }}">
+                                <h3 class="font-bold text-red-500 hover:text-red-700 hover:underline transition duration-300">{{ $member->name }}</h3>
+                            </a>
                         </div>
                     @endif
                 @endforeach
@@ -30,10 +32,12 @@
                                 $fotoPath = public_path('storage/foto/' . $member->foto);
                                 $timestamp = file_exists($fotoPath) ? filemtime($fotoPath) : time();
                             @endphp
-                            <a href="{{ route('user.detailmembers') }}">
+                            <a href="{{ route('user.detailmember', ['id' => $member->id]) }}">
                                 <img src="{{ asset('storage/foto/' . $member->foto) }}?v={{ $timestamp }}" alt="Tidak Ada Foto" class="rounded-lg w-25 h-30 mb-2 hover:scale-110 transition duration-300">
                             </a>
-                            <h3 class="font-bold text-red-500">{{ $member->name }}</h3>
+                            <a href="{{ route('user.detailmember', ['id' => $member->id]) }}">
+                                <h3 class="font-bold text-red-500 hover:text-red-700 hover:underline transition duration-300">{{ $member->name }}</h3>
+                            </a>
                         </div>
                     @endif
                 @endforeach

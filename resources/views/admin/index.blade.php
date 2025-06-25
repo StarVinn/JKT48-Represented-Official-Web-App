@@ -32,6 +32,8 @@
             <th class="px-4 py-2">Tinggi Badan</th>
             <th class="px-4 py-2">Nama Panggilan</th>
             <th class="px-4 py-2">Role</th>
+            <th class="px-4 py-2">Twitter</th>
+            <th class="px-4 py-2">Instagram</th>
             <th class="px-4 py-2">Aksi</th>
         </tr>
     </thead>
@@ -94,6 +96,8 @@
                                     ${member.role === 'trainee' ? 'Trainee' : 'Anggota'}
                                 </span>
                             </td>
+                            <td class="px-4 py-2">${member.twitter}</td>
+                            <td class="px-4 py-2">${member.instagram}</td>
                             <td class="px-4 py-2">
                                 <button onclick="deleteMember(${member.id})" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Hapus</button>
                             </td>
