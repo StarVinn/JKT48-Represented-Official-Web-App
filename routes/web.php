@@ -1,16 +1,20 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\AdminMiddleware;
-use App\Http\Controllers\MemberController;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\SetlistController;
-use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\JKT48Controller;
+use App\Http\Controllers\MemberController;
+use App\Http\Controllers\NewsScraperController;
+use App\Http\Controllers\SetlistController;
+use App\Http\Middleware\AdminMiddleware;
 
 
+use App\Http\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
+
 
 Route::get('/', function () {
     if (Auth::check()) {
@@ -31,15 +35,7 @@ Route::group(['middleware' => 'guest'], function(){
 
 // User Dashboard
 Route::middleware(['auth'])->group(function () {
-    Route::get('/user/dashboard', function () {
-        return view('user.dashboard');
-    })->name('user.dashboard');
-    Route::get('/user/profile', function () {
-        return view('user.profile');
-    })->name('user.profile');
-    Route::get('/user/settings', function () {
-        return view('user.settings');
-    })->name('user.settings');
+    Route::get('/user/dashboard',[NewsScraperController::class, 'view'])->name('user.dashboard');
     // web.php
     Route::get('/partials/members', [MemberController::class, 'getMembers'])->name('partials.members');
 
@@ -58,12 +54,17 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/members/create-multiple', [MemberController::class, 'createMultiple'])->name('members.createMultiple');
     Route::post('/members/store-multiple', [MemberController::class, 'storeMultiple'])->name('members.storeMultiple');
     Route::get('/members/download', [MemberController::class, 'export'])->name('members.export');
-    Route::get('/admin', function () {
-        return view('admin.index'); 
-    })->name('admin.index');
+
+    Route::get('/admin', [DashboardController::class, 'index'])->name('admin.index');
+
+    Route::get('/admin/members', function(){
+        return view ('admin.members');
+    })->name('admin.members');
+
     Route::get('/admin/setlist', function () {
         return view('admin.setlist');
     })->name('admin.setlist');
+
     Route::get('/admin/songs/{id}', function ($id) {
         $setlist = \App\Models\Setlist::find($id);
         $setlistTitle = $setlist ? $setlist->title : 'Unknown Setlist';
