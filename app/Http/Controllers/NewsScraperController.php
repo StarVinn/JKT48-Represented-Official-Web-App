@@ -20,4 +20,9 @@ class NewsScraperController extends Controller
         return view('user.dashboard', ['newsList' => $data]);
     }
 
+    public function index()
+    {
+        $data = $this->scraper->getAllNews();
+        return view('admin.news', ['newsList' => $data]);
+    }
 }

@@ -56,6 +56,7 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/members/download', [MemberController::class, 'export'])->name('members.export');
 
     Route::get('/admin', [DashboardController::class, 'index'])->name('admin.index');
+    Route::get('/admin/news', [NewsScraperController::class, 'index'])->name('admin.news');
 
     Route::get('/admin/members', function(){
         return view ('admin.members');

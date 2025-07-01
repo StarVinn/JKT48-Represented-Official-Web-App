@@ -11,8 +11,9 @@
 <body>
     <nav class="bg-red-900 text-white p-4">
         <div class="container mx-auto flex justify-between">
-<a href="{{ ('/admin') }}"><img class="w-10 h-15 brightness-90 hover:brightness-110 transition duration-300 ease-in-out" src="{{ url('logo.jpg') }}" alt="JKT48 Logo"></a>
+        <a href="{{ ('/admin') }}"><img class="w-10 h-15 brightness-90 hover:brightness-110 transition duration-300 ease-in-out" src="{{ url('logo.jpg') }}" alt="JKT48 Logo"></a>
             <ul class="flex items-center space-x-4">
+                <li><a href="{{ ('/admin/news') }}" class="text-white hover:text-red-500 transition duration-300 ease-in-out">News</a></li>
                 <li><a href="{{ ('/admin/members') }}" class="text-white hover:text-red-500 transition duration-300 ease-in-out">Members</a></li>
                 <li><a href="{{ ('/admin/setlist') }}" class="text-white hover:text-red-500 transition duration-300 ease-in-out">Setlist</a></li>
                 <li><a href="{{ ('/admin/user') }}" class="text-white hover:text-red-500 transition duration-300 ease-in-out">Users</a></li>
