@@ -27,8 +27,6 @@
             <p class="text-gray-700">Teater JKT48 terletak di fX Sudirman, Jakarta. Teater ini menjadi tempat pertunjukan harian bagi member JKT48
                 dan merupakan tempat di mana penggemar dapat melihat penampilan langsung dari idola mereka. Dengan kapasitas yang terbatas, setiap pertunjukan menjadi momen spesial bagi penggemar untuk berinteraksi dengan member.
             </p>
-            {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3496.3311301294607!2d106.80133567439448!3d-6.2246637609616835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14e455ccd9f%3A0xd635e33c7c001b3d!2sFX%20Sudirman!5e1!3m2!1sid!2sid!4v1744899634157!5m2!1sid!2sid" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
-            
         </div>
     </section>
 
