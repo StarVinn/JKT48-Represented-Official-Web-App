@@ -56,4 +56,5 @@ class NewsScraperController extends Controller
         $data = $this->scraper->getAllNews();
         return view('admin.news', ['newsList' => $data]);
     }
+    
 }

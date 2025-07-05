@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-100">
     <header class="bg-red-600 text-white p-4 flex items-center">
-        <a href="{{ url('/') }}" class="text-white text-xl font-bold mr-4 hover:text-gray-300 border-2 border-white rounded-lg px-1 py-1">
+        <a href="{{ url('/') }}" class="text-white text-xl font-bold mr-4 hover:text-gray-300  px-1 py-1">
             ←
         </a>
         <h1 class="text-3xl font-bold flex-1 text-left">Explore Us</h1>
@@ -57,8 +57,36 @@
 
     <section class="p-6 bg-white">
         <h2 class="text-2xl font-bold mb-4">Events & Activities</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            W.I.P
+        <div class="flex grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="container mx-auto px-4 py-6">
+                <div class="space-y-6">
+                  @foreach ($newsList as $news)
+                  <div class="flex gap-4 items-start border-b pb-4">
+                    @php
+                      $catMap = [
+                        'Theater' => 'bg-red-600',
+                        'Event' => 'bg-blue-600',
+                        'Release' => 'bg-green-600',
+                        'Birthday' => 'bg-purple-600',
+                        'Other' => 'bg-gray-500',
+                        'Unknown' => 'bg-black',
+                      ];
+                    @endphp
+                    <div>
+                      <div class="w-20 h-6 rounded text-white text-xs text-center {{ $catMap[$news['category']] ?? 'bg-black' }}">
+                        {{ $news['category'] }}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 class="text-xl font-semibold text-blue-700 hover:underline">
+                        <a href="https://jkt48.com/news/list?lang=id">{{ $news['title'] }}</a>
+                      </h3>
+                      <p class="text-sm text-gray-600 mt-1">{{ $news['date'] }}</p>
+                    </div>
+                  </div>
+                  @endforeach
+                </div>
+              </div>
         </div>
     </section>
 

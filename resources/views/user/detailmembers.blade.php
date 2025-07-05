@@ -5,13 +5,13 @@
         <div class="container mx-auto px-4 max-w-4xl">
             {{-- Back Button --}}
             <div class="mb-4">
-                <button onclick="window.history.back()" 
-                        class="text-pink-600 hover:text-pink-800 font-semibold flex items-center space-x-1">
+                <a href="{{ route('user.dashboard') }}" 
+                   class="text-pink-600 hover:text-pink-800 font-semibold flex items-center space-x-1">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
                     </svg>
                     <span>Back</span>
-                </button>
+                </a>
             </div>
             <div class="w-full bg-pink-100 bg-stripes-pattern p-4 rounded-md">
                 <h2 class="text-3xl font-bold text-pink-600 mb-6">Anggota JKT48</h2>
