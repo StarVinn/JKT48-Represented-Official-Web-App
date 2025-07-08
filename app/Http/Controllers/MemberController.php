@@ -14,7 +14,7 @@ class MemberController extends Controller
     // Method to get all members with caching
     private function getCachedMembers()
     {
-        return Cache::remember('members_all', now()->addMinutes(10), function () {
+        return Cache::remember('members_all', now()->addMinutes(60), function () {
             return Member::all();
         });
     }
@@ -166,8 +166,10 @@ class MemberController extends Controller
         if ($member->foto && file_exists(public_path('images/' . $member->foto))) {
             unlink(public_path('images/' . $member->foto));
         }
-
+        
         $member->delete();
+
+        Cache::forget('members_all');
 
         return response()->json([
             'success' => true,

@@ -1,0 +1,31 @@
+
+services:
+  app:
+    build:
+      context: .                     # <== folder tempat Dockerfile berada
+      dockerfile: Dockerfile         # <== pastikan file ini ada
+    container_name: laravel-app
+    links:
+      - database
+    depends_on:
+      - database
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 8000:8000
+    command: php artisan serve --host=0.0.0.0 --port=8000
+
+  database:
+    image: mysql:8.0.0
+    environment:
+      MYSQL_USER: "vinn"
+      MYSQL_DATABASE: "projectjkt"
+      MYSQL_PASSWORD: "password"
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+    ports:
+      - 8306:3306
+    volumes:
+      - database:/var/lib/mysql
+
+volumes:
+  database:
