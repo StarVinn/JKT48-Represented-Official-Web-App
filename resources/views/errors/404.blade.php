@@ -53,7 +53,7 @@
         <h1>404 Not Found</h1>
         <p>Halaman yang Anda cari tidak ditemukan.</p>
         <br>
-        <a href="{{ url('/') }}">Kembali ke Beranda</a>
+        <a href="javascript:window.history.back()">Kembali</a>
     </div>
 </body>
 </html>
