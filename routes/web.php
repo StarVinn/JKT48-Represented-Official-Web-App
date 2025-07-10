@@ -4,15 +4,17 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\JKT48Controller;
+use App\Http\Controllers\LiveController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\NewsScraperController;
 use App\Http\Controllers\SetlistController;
+
+
 use App\Http\Middleware\AdminMiddleware;
-
-
 use App\Http\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -44,6 +46,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/partials/theater', function () {
         return view('partials.theater');
     });
+    Route::get('/partials/lives', [LiveController::class, 'showroom'])->name('partials.live');
     Route::get('/user/detailmembers', [MemberController::class, 'detailmembers'])->name('user.detailmembers');
     Route::get('/user/detailmembers/{id}', [MemberController::class, 'detailmember'])->name('user.detailmember');
 

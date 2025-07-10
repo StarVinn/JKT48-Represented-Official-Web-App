@@ -24,6 +24,7 @@
             <li><a href="{{ ('members') }}" class="nav-link hover:text-gray-300">Members</a></li>
             <li><a href="{{ ('setlist') }}" class="nav-link hover:text-gray-300">Setlist</a></li>
             <li><a href="{{ ('theater') }}" class="nav-link hover:text-gray-300">Theater</a></li>
+            <li><a href="{{ ('live') }}" class="nav-link hover:text-gray-300">Live</a></li>
         </ul>
         <div class="relative">
             <button class="flex items-center text-lg font-bold hover:text-gray-300" id="dropdown-profile">
@@ -60,7 +61,7 @@
                 var page = $(this).attr('href');
 
                 $('#content').fadeOut(200, function() {
-                    $.get('/partials/' + page, function(data) {
+                    $.get('/partials/' + (page === 'live' ? 'lives' : page), function(data) {
                         $('#content').html(data).fadeIn(200);
                     }).fail(function() {
                         $('#content').html('<p class="text-red-500">Content not found</p>').fadeIn(200);

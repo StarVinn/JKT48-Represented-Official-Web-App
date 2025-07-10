@@ -1,11 +1,12 @@
-# di luar container
-docker compose down -v
-docker compose up --build -d
+# Langkah-Langkah Docker
+1. Setup .env 
 
-# lalu di dalam container
-docker exec -it laravel-app bash
-php artisan config:clear
-php artisan cache:clear
-php artisan route:clear
-php artisan view:clear
-php artisan migrate --seed
+`docker compose down -v` <br>
+`docker compose up --build -d`<br>
+`docker exec -it laravel-app bash`<br>
+`php artisan config:clear`<br>
+`php artisan cache:clear`<br>
+`php artisan route:clear`<br>
+`php artisan view:clear`<br>
+`php artisan migrate --seed`<br>
+`php artisan storage:link`
