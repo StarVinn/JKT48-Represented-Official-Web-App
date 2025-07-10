@@ -18,9 +18,9 @@ services:
   database:
     image: mysql:8.0.0
     environment:
-      MYSQL_USER: "vinn"
-      MYSQL_DATABASE: "projectjkt"
-      MYSQL_PASSWORD: "password"
+      MYSQL_USER: ""
+      MYSQL_DATABASE: ""
+      MYSQL_PASSWORD: ""
       MYSQL_RANDOM_ROOT_PASSWORD: "yes"
     ports:
       - 8306:3306
