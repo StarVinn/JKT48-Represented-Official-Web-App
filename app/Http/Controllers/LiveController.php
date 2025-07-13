@@ -15,7 +15,7 @@ class LiveController extends Controller
 
         if ($response->failed()) {
             $lives = Cache::get('jkt48_showroom_live', collect());
-            return view('live.showroom', [
+            return view('partials.live', [
                 'lives' => $lives,
                 'error' => 'Gagal ambil data baru, menampilkan dari cache.'
             ]);
@@ -27,6 +27,7 @@ class LiveController extends Controller
         $newLives = collect($allLiveData)
             ->flatMap(fn ($group) => $group['lives'] ?? [])
             ->filter(fn ($live) => str_contains(strtolower($live['main_name']), 'jkt48'))
+            ->unique(fn ($live) => $live['main_name']) // Remove duplicates by main_name
             ->values();
 
         $newCount = $newLives->count();
@@ -45,5 +46,5 @@ class LiveController extends Controller
             'lives' => $lives,
             'error' => null
         ]);
-    }
+    }    
 }
