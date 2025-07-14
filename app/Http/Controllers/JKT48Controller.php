@@ -20,13 +20,13 @@ class JKT48Controller extends Controller
     private function getCachedMembers()
     {
         return Cache::remember('members_all', now()->addMinutes(10), function () {
-            return Member::all();
+            return Member::select('id','name','foto','role');
         });
     }
     private function getCachedSetlists()
     {
         return Cache::remember('setlists_all', now()->addMinutes(10), function () {
-            return Setlist::all();
+            return Setlist::select('id','title','image');
         });
     }
     private function getnews()

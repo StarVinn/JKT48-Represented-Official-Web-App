@@ -14,8 +14,14 @@ class MemberController extends Controller
     // Method to get all members with caching
     private function getCachedMembers()
     {
-        return Cache::remember('members_all', now()->addMinutes(60), function () {
+        return Cache::remember('members_all', now()->addMinutes(1200), function () {
             return Member::all();
+        });
+    }
+    private function getCachedMembersSelect()
+    {
+        return Cache::remember('members_all', now()->addMinutes(1200), function () {
+            return Member::select('id','name','foto','role');
         });
     }
 
@@ -30,12 +36,12 @@ class MemberController extends Controller
     }
     public function explore(){
     // menampilkan semua member di halaman explore
-        $members = $this->getCachedMembers();
+        $members = $this->getCachedMembersSelect();
         return view('explore', compact('members'));
     }
     public function getMembers(){
     // menampilkan semua member di halaman dashboard
-        $members = $this->getCachedMembers();
+        $members = $this->getCachedMembersSelect();
         return view('partials.members', compact('members'));
     }
     public function export() 
