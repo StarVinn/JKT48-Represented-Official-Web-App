@@ -21,7 +21,7 @@ class MemberController extends Controller
     private function getCachedMembersSelect()
     {
         return Cache::remember('members_all', now()->addMinutes(1200), function () {
-            return Member::select('id','name','foto','role');
+            return Member::select('id','name','foto','role')->get();
         });
     }
 
@@ -62,7 +62,7 @@ class MemberController extends Controller
 
     public function createMultiple()
     {
-        return view('members.create_multiple');
+        return view('admin.create_multiple');
     }
 
     public function store(Request $request)

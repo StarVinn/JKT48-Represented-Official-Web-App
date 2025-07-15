@@ -14,6 +14,12 @@ class SetlistController extends Controller
             return Setlist::all();
         });
     }
+    private function getCachedSetlistsP()
+    {
+        return Cache::remember('setlists_all', now()->addMinutes(10), function () {
+            return Setlist::select('id', 'title','production_year','image')->get();
+        });
+    }
 
     public function index()
     {
@@ -27,7 +33,7 @@ class SetlistController extends Controller
     public function getSetlist()
     {
         // Fetch all setlists from the database
-        $setlists = $this->getCachedSetlists();
+        $setlists = $this->getCachedSetlistsP();
         return view('partials.setlists', compact('setlists'));
     }
 }

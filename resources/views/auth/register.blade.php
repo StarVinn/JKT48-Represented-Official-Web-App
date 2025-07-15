@@ -18,7 +18,7 @@
         <h2 class="text-2xl font-bold text-center text-red-600">Register</h2>
         <p class="text-center text-sm text-gray-500 mb-4">"Gabung bersama kami dan jadilah bagian dari komunitas yang penuh semangat!"</p>
 
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register') }}" id="registerForm">
             @csrf
             <div class="mb-4">
                 <label for="name" class="block text-gray-700 font-semibold">Name</label>
@@ -40,7 +40,7 @@
                 <input type="password" id="password_confirmation" name="password_confirmation" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400">
             </div>
 
-            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg">
+            <button type="submit" id="registerButton" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg">
                 Register
             </button>
         </form>
@@ -49,5 +49,12 @@
             Sudah punya akun? <a href="{{ route('login') }}" class="text-red-600 font-semibold">Login di sini</a>
         </p>
     </div>
+<script>
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+        var registerButton = document.getElementById('registerButton');
+        registerButton.disabled = true;
+        registerButton.textContent = 'Logging in...';
+    });
+</script>
 </body>
 </html>

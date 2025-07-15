@@ -41,9 +41,7 @@
 <script>
     document.getElementById('loginForm').addEventListener('submit', function(e) {
         var loginButton = document.getElementById('loginButton');
-        // Disable the login button to prevent multiple clicks
         loginButton.disabled = true;
-        // Optionally change button text to indicate processing
         loginButton.textContent = 'Logging in...';
     });
 </script>

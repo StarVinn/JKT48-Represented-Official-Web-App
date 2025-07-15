@@ -12,6 +12,7 @@ use App\Http\Controllers\SetlistController;
 
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\RedirectIfAuthenticated;
+use App\Http\Middleware\ImageCacheMiddleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -28,7 +29,7 @@ Route::get('/', function () {
 Route::get('/explore', [JKT48Controller::class,'index'])->name('explore');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 // Register & Login Routes
-Route::group(['middleware' => 'guest'], function(){
+Route::group(['middleware' => ['guest', ImageCacheMiddleware::class]], function(){
     Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
     Route::post('/register', [RegisterController::class, 'register']);
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
@@ -36,7 +37,7 @@ Route::group(['middleware' => 'guest'], function(){
 });
 
 // User Dashboard
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', ImageCacheMiddleware::class])->group(function () {
     Route::get('/user/dashboard',[NewsScraperController::class, 'view'])->name('user.dashboard');
     // web.php
     Route::get('/partials/members', [MemberController::class, 'getMembers'])->name('partials.members');
@@ -53,7 +54,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // Admin Dashboard
-Route::middleware([AdminMiddleware::class])->group(function () {
+Route::middleware([AdminMiddleware::class, ImageCacheMiddleware::class])->group(function () {
     Route::get('/members/create-multiple', [MemberController::class, 'createMultiple'])->name('members.createMultiple');
     Route::post('/members/store-multiple', [MemberController::class, 'storeMultiple'])->name('members.storeMultiple');
     Route::get('/members/download', [MemberController::class, 'export'])->name('members.export');
@@ -76,7 +77,7 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     })->name('admin.songs');
 
 });
-Route::middleware([RedirectIfAuthenticated::class])->group(function () {
+Route::middleware([RedirectIfAuthenticated::class, ImageCacheMiddleware::class])->group(function () {
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 });
 
