@@ -20,13 +20,20 @@
             <img src="{{ url('logo.jpg') }}" alt="Logo" class="w-12 h-15 mr-2">
             <span class="text-lg font-bold">JKT48 Fanmade Website</span>
         </a>
-        <ul class="flex gap-4">
+        <!-- Hamburger menu button for small screens -->
+        <button id="hamburger" class="block md:hidden focus:outline-none" aria-label="Toggle menu">
+            <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        <!-- Navigation links -->
+        <ul id="nav-links" class="hidden md:flex gap-4">
             <li><a href="{{ ('members') }}" class="nav-link hover:text-gray-300">Members</a></li>
             <li><a href="{{ ('setlist') }}" class="nav-link hover:text-gray-300">Setlist</a></li>
             <li><a href="{{ ('theater') }}" class="nav-link hover:text-gray-300">Theater</a></li>
             <li><a href="{{ ('live') }}" class="nav-link hover:text-gray-300">Live</a></li>
         </ul>
-        <div class="relative">
+        <div class="relative md:block hidden">
             <button class="flex items-center text-lg font-bold hover:text-gray-300" id="dropdown-profile">
                 {{ Auth::user()->name }}
                 <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -43,6 +50,31 @@
             </div>
         </div>
     </div>
+    <!-- Mobile menu -->
+    <ul id="mobile-menu" class="md:hidden hidden flex-col gap-4 bg-white text-red-500 p-4 shadow-lg absolute top-full left-0 right-0 z-40 rounded-b">
+        <li><a href="{{ ('members') }}" class="nav-link block hover:text-gray-300">Members</a></li>
+        <li><a href="{{ ('setlist') }}" class="nav-link block hover:text-gray-300">Setlist</a></li>
+        <li><a href="{{ ('theater') }}" class="nav-link block hover:text-gray-300">Theater</a></li>
+        <li><a href="{{ ('live') }}" class="nav-link block hover:text-gray-300">Live</a></li>
+        @auth
+        <li class="border-t border-gray-300 pt-4">
+            <button class="flex items-center text-lg font-bold hover:text-gray-300 w-full" id="dropdown-profile-mobile">
+                {{ Auth::user()->name }}
+                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div id="dropdown-menu-mobile" class="hidden z-50 w-full bg-white rounded divide-y divide-gray-100 shadow mt-2">
+                <ul class="py-1 text-sm text-gray-700">
+                    <li><a href="#" class="block py-2 px-4 w-full hover:bg-gray-100">Profile</a></li>
+                    <li><a href="#" class="block py-2 px-4 w-full hover:bg-gray-100">Pengaturan</a></li>
+                    <form action="{{ route('logout') }}" method="post">
+                        @csrf
+                        <button type="submit" class="block py-2 px-4 w-full text-left hover:bg-gray-100">Logout</button>
+                    </form>
+                </ul>
+            </div>
+        </li>
+        @endauth
+    </ul>
 </nav>
 
     <div id="content" class="container mx-auto p-4">
@@ -74,10 +106,21 @@
                 $('#dropdown-menu').toggleClass('hidden');
             });
 
+            $('#dropdown-profile-mobile').click(function(event) {
+                event.stopPropagation();
+                $('#dropdown-menu-mobile').toggleClass('hidden');
+            });
+
             $(document).click(function(event) {
-                if (!event.target.closest('#dropdown-profile')) {
+                if (!event.target.closest('#dropdown-profile') && !event.target.closest('#dropdown-profile-mobile')) {
                     $('#dropdown-menu').addClass('hidden');
+                    $('#dropdown-menu-mobile').addClass('hidden');
                 }
+            });
+
+            // Hamburger menu toggle
+            $('#hamburger').click(function() {
+                $('#mobile-menu').toggleClass('hidden');
             });
         });
     </script>

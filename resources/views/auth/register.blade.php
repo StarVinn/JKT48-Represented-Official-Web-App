@@ -53,7 +53,7 @@
     document.getElementById('registerForm').addEventListener('submit', function(e) {
         var registerButton = document.getElementById('registerButton');
         registerButton.disabled = true;
-        registerButton.textContent = 'Logging in...';
+        registerButton.textContent = 'Register in...';
     });
 </script>
 </body>

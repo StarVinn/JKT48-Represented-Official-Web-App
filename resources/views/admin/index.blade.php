@@ -25,10 +25,10 @@
     <h1 class="text-3xl text-center font-bold mb-6 border-b pb-2">Next Birthday Members JKT48 🎊🎊🎂🎂</h1>
 
     @if(isset($nextBirthdays) && $nextBirthdays->count() > 0)
-      <div class="flex justify-center gap-12 bg-white py-8 px-4">
+      <div class="flex flex-wrap justify-center gap-6 bg-white py-8 px-4">
         @foreach($nextBirthdays as $member)
-          <div class="flex flex-col items-center bg-pink-100 p-4 text-center max-w-[180px]">
-            <img src="{{ asset('storage/foto/' . $member->foto) }}" alt="{{ $member->name }}" class="rounded-lg w-40 h-52 object-cover mb-2">
+          <div class="flex flex-col items-center bg-pink-100 p-4 text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4 max-w-[180px]">
+            <img src="{{ asset('storage/foto/' . $member->foto) }}" alt="{{ $member->name }}" class="rounded-lg w-full max-w-[160px] h-auto object-cover mb-2">
             <div class="text-pink-600 font-semibold text-sm">[{{ ucfirst($member->role) }}]</div>
             <div class="text-pink-700 font-bold">{{ $member->name }}</div>
             <div class="text-pink-700">{{ \Carbon\Carbon::parse($member->tanggal_lahir)->translatedFormat('d F Y') }}</div>
