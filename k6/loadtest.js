@@ -9,7 +9,7 @@ export const options = {
     ],
 };
 export default function () {
-    const res = http.get("http://localhost:8000/api/setlists");
+    const res = http.get("http://localhost:8000/api/members");
     check(res, {
         "status code 200": (r) => r.status === 200,
         "response time < 5000ms": (r) => r.timings.duration < 5000,
