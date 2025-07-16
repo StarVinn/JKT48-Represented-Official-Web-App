@@ -92,8 +92,16 @@
                             <td class="px-4 py-2">${member.tinggi_badan} cm</td>
                             <td class="px-4 py-2">${member.nama_panggilan}</td>
                             <td class="px-4 py-2">
-                                <span class="px-2 py-1 rounded ${member.role === 'trainee' ? 'bg-yellow-400' : 'bg-green-500'} text-white">
-                                    ${member.role === 'trainee' ? 'Trainee' : 'Anggota'}
+                                <span class="px-2 py-1 rounded ${
+                                member.role === 'trainee' ? 'bg-yellow-400' :
+                                member.role === 'anggota' ? 'bg-green-500' :
+                                'bg-gray-400'
+                                } text-white">
+                                ${
+                                    member.role === 'trainee' ? 'Trainee' :
+                                    member.role === 'anggota' ? 'Anggota' :
+                                    member.role
+                                }
                                 </span>
                             </td>
                             <td class="px-4 py-2">${member.twitter}</td>
