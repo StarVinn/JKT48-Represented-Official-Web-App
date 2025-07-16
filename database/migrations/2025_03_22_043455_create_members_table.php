@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('horoskop');
             $table->string('tinggi_badan');
             $table->string('nama_panggilan');
-            $table->string('role')->default('trainee');
+            $table->string('role');
             $table->string('foto');
             $table->string('twitter');
             $table->string('instagram');
