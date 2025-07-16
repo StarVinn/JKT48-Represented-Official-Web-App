@@ -15,7 +15,7 @@ class MemberController extends Controller
     private function getCachedMembers()
     {
         return Cache::remember('members_all', now()->addMinutes(1200), function () {
-            return Member::all();
+            return Member::select('id','name','tanggal_lahir','golongan_darah','horoskop','tinggi_badan','nama_panggilan','foto')->get();
         });
     }
     private function getCachedMembersSelect()
