@@ -17,13 +17,13 @@
 
     <section class="p-6">
         <h2 class="text-2xl font-bold mb-4">About JKT48</h2>
-        <p class="mb-4">JKT48 adalah grup idola asal Indonesia yang dibentuk berdasarkan konsep AKB48 dari Jepang, dengan konsep "Idol You Can Meet". Grup ini terkenal dengan pertunjukan teater harian mereka di Jakarta. Member JKT48 dilatih secara ketat dalam bernyanyi, menari, dan berinteraksi dengan penggemar untuk menciptakan pengalaman unik yang tak terlupakan.</p>
+        <p class="mb-4 text-justify leading-relaxed text-gray-700">JKT48 adalah grup idola asal Indonesia yang dibentuk berdasarkan konsep AKB48 dari Jepang, dengan konsep "Idol You Can Meet". Grup ini terkenal dengan pertunjukan teater harian mereka di Jakarta. Member JKT48 dilatih secara ketat dalam bernyanyi, menari, dan berinteraksi dengan penggemar untuk menciptakan pengalaman unik yang tak terlupakan.</p>
     </section>
 
     <section class="p-6 bg-white">
         <h2 class="text-2xl font-bold mb-4">Theater JKT48</h2>
-        <div class="flex gap-4">
-            <img src="{{ asset('storage/foto/theater.jpg') }}" alt="JKT48 Theater" class="w-1/4 rounded-lg shadow-md">
+        <div class="flex flex-col md:flex-row gap-4">
+            <img src="{{ asset('storage/foto/theater.jpg') }}" alt="JKT48 Theater" class="w-full md:w-1/4 rounded-lg shadow-md">
             <p class="text-gray-700">Teater JKT48 terletak di fX Sudirman, Jakarta. Teater ini menjadi tempat pertunjukan harian bagi member JKT48
                 dan merupakan tempat di mana penggemar dapat melihat penampilan langsung dari idola mereka. Dengan kapasitas yang terbatas, setiap pertunjukan menjadi momen spesial bagi penggemar untuk berinteraksi dengan member.
             </p>
@@ -44,7 +44,7 @@
 
     <section class="p-6">
         <h2 class="text-2xl font-bold mb-4">Active Members</h2>
-        <div class="grid grid-cols-[repeat(auto-fit,_minmax(150px,_1fr))] gap-4">
+        <div class="grid grid-cols-3 gap-4">
             @foreach ($members as $member)
                 <div class="bg-white p-4 rounded-lg shadow-md">
                     <img src="{{ asset('storage/foto/' . $member->foto) }}" alt="Tidak Ada Foto" class="rounded-lg mb-2">

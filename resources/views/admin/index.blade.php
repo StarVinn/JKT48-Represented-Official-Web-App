@@ -5,7 +5,7 @@
 <h1 class="text-3xl font-bold mb-4">Dashboard</h1>
 
 {{-- Dashboard Statistics --}}
-<div class="grid grid-cols-4 gap-4 mb-6">
+<div class="grid grid-cols-3 gap-4 mb-6">
     <div class="bg-blue-500 text-white rounded-lg p-4 shadow">
         <h2 class="text-xl font-bold">{{ $membersCount}}</h2>
         <p>Members</p>

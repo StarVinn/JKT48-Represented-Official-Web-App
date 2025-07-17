@@ -3,6 +3,7 @@
 @section('content')
 <h1 class="text-3xl font-bold mb-4">Daftar Setlist</h1>
 
+<div class="overflow-x-auto w-full">
 <table id="setlist-table" class="table-auto w-full border-collapse border border-gray-300">
     <thead>
         <tr class="bg-gray-200">
@@ -18,6 +19,7 @@
         <tr><td colspan="5" class="px-4 py-2">Loading...</td></tr>
     </tbody>
 </table>
+</div>
 
 <script>
     function loadSetlists() {
@@ -40,7 +42,7 @@
                             <td class="border border-gray-300 px-4 py-2">${setlist.artist}</td>
                             <td class="border border-gray-300 px-4 py-2">${setlist.production_year}</td>
                             <td class="border border-gray-300 px-4 py-2">
-                                <a href="/admin/songs/${setlist.id}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                                <a href="/admin/songs/${setlist.id}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded block truncate max-w-full">
                                     Show Songs
                                 </a>
                             </td>
