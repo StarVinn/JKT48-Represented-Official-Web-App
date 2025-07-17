@@ -40,8 +40,6 @@
             </button>
             <div id="dropdown-menu" class="hidden z-50 w-44 bg-white rounded divide-y divide-gray-100 shadow absolute top-full right-0">
                 <ul class="py-1 text-sm text-gray-700">
-                    <li><a href="#" class="block py-2 px-4 w-full hover:bg-gray-100">Profile</a></li>
-                    <li><a href="#" class="block py-2 px-4 w-full hover:bg-gray-100">Pengaturan</a></li>
                     <form action="{{ route('logout') }}" method="post">
                         @csrf
                         <button type="submit" class="block py-2 px-4 w-full text-left hover:bg-gray-100">Logout</button>
@@ -64,8 +62,6 @@
             </button>
             <div id="dropdown-menu-mobile" class="hidden z-50 w-full bg-white rounded divide-y divide-gray-100 shadow mt-2">
                 <ul class="py-1 text-sm text-gray-700">
-                    <li><a href="#" class="block py-2 px-4 w-full hover:bg-gray-100">Profile</a></li>
-                    <li><a href="#" class="block py-2 px-4 w-full hover:bg-gray-100">Pengaturan</a></li>
                     <form action="{{ route('logout') }}" method="post">
                         @csrf
                         <button type="submit" class="block py-2 px-4 w-full text-left hover:bg-gray-100">Logout</button>

@@ -20,6 +20,7 @@
     <option value="za">Z-A</option>
 </select>
 
+<div class="overflow-x-auto w-full">
 <table class="table-auto w-full">
     <thead>
         <tr>
@@ -48,6 +49,7 @@
         </tr>
     </tfoot>
 </table>
+</div>
 @endsection
 
 <script>

@@ -76,17 +76,17 @@
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center text-white bg-red-700 bg-opacity-70">
     <header class="absolute top-4 left-4 flex items-center space-x-3">
-        <img src="{{ url('logo.jpg') }}" alt="JKT48 Logo" class="w-12 h-16">
-        <h1 class="text-xl font-bold">JKT48 Fanmade Website</h1>
+        <img src="{{ url('logo.jpg') }}" alt="JKT48 Logo" class="w-8 h-12 sm:w-12 sm:h-16">
+        <h1 class="text-lg sm:text-xl font-bold">JKT48 Fanmade Website</h1>
     </header>
     
-    <div class="text-center p-8 bg-white bg-opacity-20 backdrop-blur-none rounded-2xl shadow-lg max-w-lg">
-        <h1 class="text-4xl font-bold text-white drop-shadow-lg">Welcome to JKT48 Fanmade Website</h1>
-        <p class="mt-4 text-lg text-white opacity-90">Dukung dengan hati, nikmati setiap momen, dan biarkan semangat mereka menginspirasi langkahmu.</p>
+    <div class="text-center p-4 sm:p-8 bg-white bg-opacity-20 backdrop-blur-none rounded-2xl shadow-lg max-w-xs sm:max-w-lg">
+        <h1 class="text-2xl sm:text-4xl font-bold text-white drop-shadow-lg">Welcome to JKT48 Fanmade Website</h1>
+        <p class="mt-2 sm:mt-4 text-base sm:text-lg text-white opacity-90">Dukung dengan hati, nikmati setiap momen, dan biarkan semangat mereka menginspirasi langkahmu.</p>
         
-        <div class="mt-6 space-x-4">
-            <a href="{{ route('register') }}" class="bg-white text-red-600 font-bold py-2 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition">Get Started</a>
-            <a href="{{ ('explore') }}" class="bg-red-600 text-white font-bold py-2 px-6 rounded-lg shadow-lg hover:bg-red-700 transition">Explore</a>
+        <div class="mt-6 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center">
+            <a href="{{ route('register') }}" class="bg-white text-red-600 font-bold py-2 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition text-center">Get Started</a>
+            <a href="{{ ('explore') }}" class="bg-red-600 text-white font-bold py-2 px-6 rounded-lg shadow-lg hover:bg-red-700 transition text-center">Explore</a>
         </div>
     </div>
 </body>
