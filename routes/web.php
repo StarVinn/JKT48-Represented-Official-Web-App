@@ -51,6 +51,10 @@ Route::middleware(['auth', ImageCacheMiddleware::class])->group(function () {
     Route::get('/user/detailmembers', [MemberController::class, 'detailmembers'])->name('user.detailmembers');
     Route::get('/user/detailmembers/{id}', [MemberController::class, 'detailmember'])->name('user.detailmember');
 
+    // User Profile routes
+    Route::get('/user/profile', [\App\Http\Controllers\UserProfileController::class, 'showProfile'])->name('user.profile');
+    Route::post('/user/profile', [\App\Http\Controllers\UserProfileController::class, 'updateProfile'])->name('user.profile.update');
+    Route::get('/user/profile/show', [\App\Http\Controllers\UserProfileController::class, 'showProfileDetail'])->name('user.profile.show');
 });
 
 // Admin Dashboard
