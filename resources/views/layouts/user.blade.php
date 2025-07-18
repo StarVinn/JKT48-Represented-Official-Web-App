@@ -35,8 +35,11 @@
         </ul>
         <div class="relative md:block hidden">
             <button class="flex items-center text-lg font-bold hover:text-gray-300" id="dropdown-profile">
-                {{ Auth::user()->name }}
-                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                @if(Auth::user()->profile_picture)
+                    <img src="{{ asset('profile_picture/' . Auth::user()->profile_picture) }}" alt="Profile Picture" class="ml-2 w-14 h-14 rounded-full object-cover">
+                @else
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                @endif
             </button>
             <div id="dropdown-menu" class="hidden z-50 w-44 bg-white rounded divide-y divide-gray-100 shadow absolute top-full right-0">
                 <ul class="py-1 text-sm text-gray-700">
@@ -60,8 +63,12 @@
         @auth
         <li class="border-t border-gray-300 pt-4">
             <button class="flex items-center text-lg font-bold hover:text-gray-300 w-full" id="dropdown-profile-mobile">
-                {{ Auth::user()->name }}
-                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                {{Auth::user()->name}}&nbsp;&nbsp;
+                @if(Auth::user()->profile_picture)
+                    <img src="{{ asset('profile_picture/' . Auth::user()->profile_picture) }}" alt="Profile Picture" class="w-14 h-14 rounded-full object-cover mt-1">
+                @else
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                @endif
             </button>
             <div id="dropdown-menu-mobile" class="hidden z-50 w-full bg-white rounded divide-y divide-gray-100 shadow mt-2">
                 <ul class="py-1 text-sm text-gray-700">
