@@ -35,13 +35,13 @@ class LoginController extends Controller
         $user = User::where('email', $credentials['email'])->first();
         if (!$user) {
             return back()->withErrors([
-                'email' => 'Email tidak terdaftar.',
+                'email' => 'The Account does not exist.',
             ])->withInput();
         }
         // Cek apakah password yang dimasukkan benar
         if (!password_verify($credentials['password'], $user->password)) {
             return back()->withErrors([
-                'email' => 'Email atau password salah.',
+                'email' => 'Invalid Credentials, Please Check Again',
             ])->withInput();
         }
 
@@ -55,7 +55,7 @@ class LoginController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'Email atau password salah.',
+            'email' => 'Invalid Credentials, Please Check Again',
         ])->withInput();
     }
 

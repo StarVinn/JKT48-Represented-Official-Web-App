@@ -35,16 +35,17 @@
                 <input type="password" id="password" name="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400" />
             </div>
 
-            <div class="mb-4">
-                <label for="password_confirmation" class="block text-gray-700 font-semibold">Confirm Password</label>
-                <input type="password" id="password_confirmation" name="password_confirmation" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400" />
-            </div>
-
             <button type="submit" id="registerButton" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg">
                 Register
             </button>
         </form>
-
+        @if ($errors->any())
+            <div class="text-red-500 mb-4">
+                @foreach ($errors->all() as $error)
+                    <p>{{ $error }}</p>
+                @endforeach
+            </div>
+        @endif
         <p class="text-center text-sm text-gray-500 mt-4">
             Sudah punya akun? <a href="{{ route('login') }}" class="text-red-600 font-semibold">Login di sini</a>
         </p>

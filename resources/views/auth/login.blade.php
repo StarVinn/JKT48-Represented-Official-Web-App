@@ -18,6 +18,8 @@
         <h2 class="text-2xl font-bold text-center text-red-600">Login</h2>
         <p class="text-center text-sm text-gray-500 mb-4">"Dukung dengan hati, nikmati setiap momen, dan biarkan semangat mereka menginspirasi langkahmu."</p>
         
+        
+
         <form method="POST" action="{{ route('login') }}" id="loginForm">
             @csrf
             <div class="mb-4">
@@ -34,6 +36,13 @@
                 Login
             </button>
         </form>
+        @if ($errors->any())
+            <div class="text-red-500 mb-4">
+                @foreach ($errors->all() as $error)
+                    <p>{{ $error }}</p>
+                @endforeach
+            </div>
+        @endif
         <p class="text-center text-sm text-gray-500 mt-4">
             Belum punya akun? <a href="{{ route('register') }}" class="text-red-600 font-semibold">Daftar di sini</a>
         </p>
