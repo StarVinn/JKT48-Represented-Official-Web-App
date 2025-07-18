@@ -1,5 +1,5 @@
 <section class="p-6">
-    <h3 class="bg-pink text-red-500 font-bold mb-4 text-2xl">Active Member</h3>
+    <h3 class="bg-pink-500 text-white font-bold mb-4 text-2xl p-2 rounded">Active Member</h3>
     <div class="grid grid-cols-1 gap-4">
         <div class="bg-white p-4 rounded-lg">
             <h3 class="font-bold text-red-500 text-2xl mb-4">Anggota</h3>
