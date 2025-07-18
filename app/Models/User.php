@@ -15,7 +15,14 @@ class User extends Authenticatable
         'email',
         'password',
         'role',
+        'profile_picture',
+        'bio',
     ];
+
+    public function oshimen()
+    {
+        return $this->belongsToMany(\App\Models\Member::class, 'user_oshimen', 'user_id', 'member_id')->withTimestamps();
+    }
 
     protected $hidden = [
         'password',
