@@ -7,14 +7,14 @@ This is my personal website as a JKT48 fan, This website was built using Laravel
 2. Run `composer install`
 3. Run `cp .env.example .env`
 4. Run `php artisan key:generate`
-5. Run `php artisan migrate:fresh --seed`
-6. Run `php artisan serve`
+5. Run `php artisan migrate --seed`
+6. Run `php artisan storage:link`
+8. Run `php artisan serve`
 
 ## Usage
 1. Open a Web Browser and navigate to `http://127.0.0.1:8000/`
 2. You have to register and login to access the dashboard
 3. After login you can see all JKT48 members
-4. If you want to add new member you can login as admin(check example on AdminSeeder.php)
 
 
 ## API Endpoints
