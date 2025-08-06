@@ -10,9 +10,7 @@
 @section('content')
 <h4 class="text-lg font-bold">Welcome.. {{ Auth::user()->name }}</h4> 
 <h1 class="text-3xl font-bold mb-4">Daftar Member</h1>
-<a href="{{ route('members.createMultiple') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Tambah Member</a>
-
-<br><br>
+{{-- <a href="{{ route('members.createMultiple') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Tambah Member</a> --}}
 <!-- Dropdown Sort -->
 <label class="block text-gray-700 text-sm font-bold mb-2">Urutkan Nama:</label>
 <select id="sortSelect" onchange="loadMembers()" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
@@ -20,8 +18,19 @@
     <option value="za">Z-A</option>
 </select>
 
-<div class="overflow-x-auto w-full">
-<table class="table-auto w-full">
+<div class="overflow-x-auto w-full relative">
+    <!-- Mobile scroll indicator -->
+    <div class="md:hidden flex items-center justify-center text-sm text-gray-500 mb-2">
+        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+        <span>Geser ke kanan untuk melihat lebih banyak</span>
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+    </div>
+    
+<table class="table-auto w-full min-w-[768px]">
     <thead>
         <tr>
             <th class="px-4 py-2">ID</th>

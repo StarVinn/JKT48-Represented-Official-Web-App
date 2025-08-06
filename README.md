@@ -24,6 +24,10 @@ This is my personal website as a JKT48 fan, This website was built using Laravel
 - Retrieves a list of all JKT48 setlists
 ### GET /api/setlists/{id}
 - Retrieves a single JKT48 setlist by id
+### GET /api/news
+- Retrieves a list of all JKT48 news
+### GET /api/showroom
+- Retrieves a list of all JKT48 showroom
 
 ## Message
 This API is a part of an ongoing development journey. I am committed to continuously improving and expanding its features to meet evolving needs and deliver better functionality over time. Regular updates will be made to ensure it remains relevant, reliable, and aligned with the best development practices. Your feedback and support are highly appreciated as I strive to make this API even more powerful and efficient in the future. Thank you for your interest in this project.

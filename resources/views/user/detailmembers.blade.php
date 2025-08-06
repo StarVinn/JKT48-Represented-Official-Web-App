@@ -51,7 +51,7 @@
                             </tr>
                             <tr class="border-b">
                                 <th class="py-2 font-semibold">Tinggi Badan</th>
-                                <td class="py-2">{{ $member->tinggi_badan }}</td>
+                                <td class="py-2">{{ $member->tinggi_badan }} cm</td>
                             </tr>
                             <tr>
                                 <th class="py-2 font-semibold">Nama Panggilan</th>

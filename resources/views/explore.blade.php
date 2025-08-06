@@ -44,11 +44,12 @@
 
     <section class="p-6">
         <h2 class="text-2xl font-bold mb-4">Active Members</h2>
-        <div class="grid grid-cols-3 gap-4">
+        <!-- Mobile: 5 columns, Web/Desktop: 10 columns -->
+        <div class="grid grid-cols-3 md:grid-cols-10 gap-4">
             @foreach ($members as $member)
-                <div class="bg-white p-4 rounded-lg shadow-md">
-                    <img src="{{ asset('storage/foto/' . $member->foto) }}" alt="Tidak Ada Foto" class="rounded-lg mb-2">
-                    <h3 class="font-bold">{{ $member->name }}</h3>
+                <div class="bg-white p-2 md:p-4 rounded-lg shadow-md">
+                    <img src="{{ asset('storage/foto/' . $member->foto) }}" alt="Tidak Ada Foto" class="rounded-lg mb-1 md:mb-2 w-full h-auto">
+                    <h3 class="font-bold text-xs md:text-sm">{{ $member->name }}</h3>
                 </div>
             @endforeach
         </div>

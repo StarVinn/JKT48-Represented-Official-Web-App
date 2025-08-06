@@ -56,5 +56,19 @@ class NewsScraperController extends Controller
         $data = $this->scraper->getAllNews();
         return view('admin.news', ['newsList' => $data]);
     }
+
+    public function api(){
+        $data = $this->scraper->getAllNews();
+        if (!$data) {
+            return response()->json([
+                'success' => false,
+                'message' => 'No news found.'
+            ], 404);
+        }
+        return response()->json([
+            'success' => true, 
+            'data' =>$data
+        ], 200);
+    }
     
 }

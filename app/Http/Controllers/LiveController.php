@@ -46,5 +46,31 @@ class LiveController extends Controller
             'lives' => $lives,
             'error' => null
         ]);
+    }
+    public function showroomApi()
+    {
+        // Ambil data terbaru dari API (sementara, tidak di-cache)
+        $response = Http::get('https://www.showroom-live.com/api/live/onlives');
+
+        if ($response->failed()) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Gagal ambil data terbaru.'
+            ], 500);
+        }
+
+        $allLiveData = $response->json()['onlives'] ?? [];
+
+        // Filter JKT48
+        $newLives = collect($allLiveData)
+            ->flatMap(fn ($group) => $group['lives'] ?? [])
+            ->filter(fn ($live) => str_contains(strtolower($live['main_name']), 'jkt48'))
+            ->unique(fn ($live) => $live['main_name']) // Remove duplicates by main_name
+            ->values();
+
+        return response()->json([
+            'success' => true,
+            'data' => $newLives
+        ]);
     }    
 }

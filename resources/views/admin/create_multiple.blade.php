@@ -68,7 +68,7 @@
         <br><br>
         <button type="submit">Simpan Semua Member</button>
 
-        <a href="{{ url('/') }}">Back</a>
+        <a href="{{ url('/admin') }}">Back</a>
     </form>
 
     <script>
