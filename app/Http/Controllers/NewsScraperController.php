@@ -67,7 +67,7 @@ class NewsScraperController extends Controller
         }
         return response()->json([
             'success' => true, 
-            'data' =>$data
+            'data' => $data
         ], 200);
     }
     
