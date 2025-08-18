@@ -653,18 +653,6 @@ class MemberSeeder extends Seeder
             "instagram" => "jkt48.oline",
         ],
         [
-            "name"=> "Regina Wilian",
-            "tanggal_lahir"=> "2009-12-10",
-            "golongan_darah"=> "B",
-            "horoskop"=> "Sagittarius",
-            "tinggi_badan"=> "169",
-            "nama_panggilan"=> "Regie",
-            "role"=> "trainee",
-            "foto"=> "regina_wilian.jpg",
-            "twitter" => "RegieJKT48",
-            "instagram" => "jkt48.regie",
-        ],
-        [
             "name"=> "Ribka Budiman",
             "tanggal_lahir"=> "2009-01-13",
             "golongan_darah"=> "O",
