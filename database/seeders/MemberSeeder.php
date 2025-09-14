@@ -316,7 +316,7 @@ class MemberSeeder extends Seeder
             "twitter" => "C_IndahJKT48",
             "instagram" => "jkt48indah_",
         ],
-        [
+        /* [
             "name"=> "Indira Seruni",
             "tanggal_lahir"=> "2004-04-26",
             "golongan_darah"=> "A",
@@ -327,7 +327,7 @@ class MemberSeeder extends Seeder
             "foto"=> "indira_seruni.jpg",
             "twitter" => "SP_IndiraJKT48",
             "instagram" => "jkt48.indira.s",
-        ],
+        ],*/
         [
             "name"=> "Jessica Chandra",
             "tanggal_lahir"=> "2005-09-23",
