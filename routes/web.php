@@ -50,6 +50,8 @@ Route::middleware(['auth', ImageCacheMiddleware::class])->group(function () {
     Route::get('/partials/lives', [LiveController::class, 'showroom'])->name('partials.live');
     Route::get('/user/detailmembers', [MemberController::class, 'detailmembers'])->name('user.detailmembers');
     Route::get('/user/detailmembers/{id}', [MemberController::class, 'detailmember'])->name('user.detailmember');
+    Route::get('/user/setlists', [SetlistController::class, 'index'])->name('user.setlists');
+    Route::get('/user/setlists/{id}', [SetlistController::class, 'show'])->name('user.setlists.show');
 
     // User Profile routes
     Route::get('/user/profile', [\App\Http\Controllers\UserProfileController::class, 'showProfile'])->name('user.profile');
