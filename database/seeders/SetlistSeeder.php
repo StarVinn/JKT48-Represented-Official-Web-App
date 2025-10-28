@@ -67,7 +67,33 @@ public function run(): void
                 ['title' => 'Nafas Dalam Air Mata (Namida no Shinkokyuu)', 'track_number' => 15, 'duration' => '04:15'],
                 ['title' => 'Teriakan Berlian (Oogoe Diamond)', 'track_number' => 16, 'duration' => '04:20'],
             ],
-        ]
+        ],
+        [
+            'setlist' => [
+                'title' => 'Aitakatta',
+                'artist' => 'JKT48',
+                'production_year' => 2023,
+                'image' => 'aitakatta.jpg',
+            ],
+            'songs' => [
+                ['title' => 'Boneka yang Sedih (Nageki no Figure)', 'track_number' => 1, 'duration' => '04:30'],
+                ['title' => 'Air Mata Shounan (Namida no Shounan)', 'track_number' => 2, 'duration' => '04:08'],
+                ['title' => 'Ingin Bertemu (Aitakatta)', 'track_number' => 3, 'duration' => '03:47'],
+                ['title' => 'Cherry Tepi Pantai (Nagisa no Cherry)', 'track_number' => 4, 'duration' => '03:44'],
+                ['title' => 'Kaca Berbentuk I Love You (Glass no I Love You)', 'track_number' => 5, 'duration' => '02:55'],
+                ['title' => 'Rencana Cinta (Koi no Plan)', 'track_number' => 6, 'duration' => '04:06'],
+                ['title' => 'Peluklah Aku Dari Belakang (Senaka Kara Dakishimete)', 'track_number' => 7, 'duration' => '03:27'],
+                ['title' => 'Revolusi Rio (Rio no Kakumei)', 'track_number' => 8, 'duration' => '04:11'],
+                ['title' => 'Tetapi (Dakedo)', 'track_number' => 9, 'duration' => '04:36'],
+                ['title' => 'Dear My Teacher', 'track_number' => 10, 'duration' => '04:20'],
+                ['title' => 'Pintu Masa Depan (Mirai no Tobira)', 'track_number' => 11, 'duration' => '05:02'],
+                ['title' => 'JKT48 (Jakarta48)', 'track_number' => 12, 'duration' => '03:56'],
+                ['title' => 'Rok Bergoyang (Skirt, Hirari)', 'track_number' => 13, 'duration' => '04:02'],
+
+                
+
+            ],
+        ],
     ];
     // untuk menambahkan dengan foreach
     foreach ($setlists as $data) {
