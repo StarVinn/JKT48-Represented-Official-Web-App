@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\Jkt48ScraperService;
 use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
 
@@ -12,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+            $this->app->singleton(Jkt48ScraperService::class, function () {
+            return new Jkt48ScraperService();
+        });
     }
 
     /**

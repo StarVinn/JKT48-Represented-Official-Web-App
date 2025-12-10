@@ -86,7 +86,7 @@ Route::middleware([AdminMiddleware::class, ImageCacheMiddleware::class])->group(
 Route::middleware([RedirectIfAuthenticated::class, ImageCacheMiddleware::class])->group(function () {
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 });
-
+ 
 
 
 

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Services\Jkt48ScraperService;
-use Illuminate\Http\Request;
 use App\Models\Member;
 use Carbon\Carbon;
 
@@ -16,59 +15,57 @@ class NewsScraperController extends Controller
         $this->scraper = $scraper;
     }
 
+    // ===============================
+    // USER DASHBOARD (NEWS + 3 BIRTHDAY)
+    // ===============================
     public function view()
     {
-        $data = $this->scraper->getAllNews();
+        $news = $this->scraper->getAllNews();
 
-        // Get today's date and current year
         $today = Carbon::now();
         $currentYear = $today->year;
 
-        // Fetch all members and calculate next birthday date for sorting
+        // Hitung next birthday semua member
         $members = Member::all()->map(function ($member) use ($currentYear, $today) {
             $birthDate = Carbon::parse($member->tanggal_lahir);
-            // Set birthday this year
-            $birthdayThisYear = $birthDate->copy()->year($currentYear);
 
-            // If birthday this year already passed, set to next year
-            if ($birthdayThisYear->lt($today)) {
-                $birthdayThisYear->addYear();
+            $thisYear = $birthDate->copy()->year($currentYear);
+
+            if ($thisYear->lt($today)) {
+                $thisYear->addYear();
             }
 
-            $member->next_birthday = $birthdayThisYear;
+            $member->next_birthday = $thisYear;
             return $member;
         });
 
-        // Sort members by next birthday date ascending
-        $sortedMembers = $members->sortBy('next_birthday')->values();
-
-        // Take first 3 members with upcoming birthdays
-        $nextBirthdays = $sortedMembers->take(3);
+        $nextBirthdays = $members->sortBy('next_birthday')->take(3);
 
         return view('user.dashboard', [
-            'newsList' => $data,
+            'newsList'      => $news,
             'nextBirthdays' => $nextBirthdays,
         ]);
     }
 
+    // ===============================
+    // ADMIN LIST NEWS
+    // ===============================
     public function index()
     {
-        $data = $this->scraper->getAllNews();
-        return view('admin.news', ['newsList' => $data]);
+        $news = $this->scraper->getAllNews();
+        return view('admin.news', ['newsList' => $news]);
     }
 
-    public function api(){
-        $data = $this->scraper->getAllNews();
-        if (!$data) {
-            return response()->json([
-                'success' => false,
-                'message' => 'No news found.'
-            ], 404);
-        }
+    // ===============================
+    // API NEWS LIST
+    // ===============================
+    public function api()
+    {
+        $news = $this->scraper->getAllNews();
+
         return response()->json([
-            'success' => true, 
-            'data' => $data
-        ], 200);
+            'success' => true,
+            'data'    => $news,
+        ]);
     }
-    
 }
