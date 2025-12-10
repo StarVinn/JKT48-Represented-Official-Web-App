@@ -109,7 +109,7 @@
         </div>
         <div>
           <h3 class="text-xl font-semibold text-blue-700 hover:underline">
-            <a href="https://jkt48.com/news/list?lang=id">{{ $news['title'] }}</a>
+            <a href="{{ $news['url'] }}">{{ $news['title'] }}</a>
           </h3>
           <p class="text-sm text-gray-600 mt-1">{{ $news['date'] }}</p>
         </div>
