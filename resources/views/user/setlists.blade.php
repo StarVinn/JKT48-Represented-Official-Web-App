@@ -34,12 +34,7 @@
                         <div class="flex justify-between items-center">
                             <div>
                                 <h3 class="text-lg font-semibold text-gray-800">{{ $song->title }}</h3>
-                                <p class="text-sm text-gray-600">Artist: {{ $song->artist }}</p>
-                                <p class="text-sm text-gray-600">Track Number: {{ $song->track_number }}</p>
                                 <p class="text-sm text-gray-600">Duration: {{ $song->duration }}</p>
-                                @if($song->notes)
-                                    <p class="text-sm text-gray-600">Notes: {{ $song->notes }}</p>
-                                @endif
                             </div>
                         </div>
                     </div>

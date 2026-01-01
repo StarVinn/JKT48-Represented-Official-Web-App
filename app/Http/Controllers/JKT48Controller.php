@@ -20,7 +20,7 @@ class JKT48Controller extends Controller
     private function getCachedMembers()
     {
         return Cache::remember('members_all', now()->addMinutes(1200), function () {
-            return Member::select('id','name','foto','role')->get();
+            return Member::select('id','name','foto','role')->get()->where('role', 'anggota');
         });
     }
     private function getCachedSetlists()
