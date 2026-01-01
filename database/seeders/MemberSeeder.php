@@ -424,7 +424,7 @@ class MemberSeeder extends Seeder
             "twitter" => "SW_RaishaJKT48",
             "instagram" => "jkt48.raisha.s",
         ],
-        [
+        /* [
             "name"=> "Shania Gracia",
             "tanggal_lahir"=> "1999-08-31",
             "golongan_darah"=> "A",
@@ -435,7 +435,7 @@ class MemberSeeder extends Seeder
             "foto"=> "shania_gracia.jpg",
             "twitter" => "S_GraciaJKT48",
             "instagram" => "jkt48gracia",
-        ],
+        ],*/
         [
             "name"=> "Abigail Rachel",
             "tanggal_lahir"=> "2008-08-06",
