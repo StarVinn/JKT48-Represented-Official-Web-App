@@ -75,9 +75,9 @@
 
   <!-- === SLIDER GAMBAR === -->
   <div class="slider-container" id="imageSlider">
-    <div class="slide"><img src="{{ asset('background.jpg') }}" alt="1"></div>
-    <div class="slide"><img src="{{ asset('background2.jpg') }}" alt="2"></div>
-    <div class="slide"><img src="{{ asset('background3.jpg') }}" alt="3"></div>
+    <div class="slide"><img src="{{ asset('background14.jpg') }}" alt="1"></div>
+    <div class="slide"><img src="{{ asset('background8.jpg') }}" alt="2"></div>
+    <div class="slide"><img src="{{ asset('background10.jpg') }}" alt="3"></div>
   </div>
   <div class="pagination" id="imagePagination">
     <button data-index="0" class="active"></button>

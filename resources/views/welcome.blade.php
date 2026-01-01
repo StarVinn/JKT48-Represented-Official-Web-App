@@ -28,13 +28,13 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const images = [
-                'background.jpg',
-                'background2.jpg',
-                'background3.jpg',
-                'background4.jpg',
-                'background5.jpg',
-                'background6.jpg',
-                'background7.jpg',
+                'background14.jpg',
+                'background13.jpg',
+                'background12.jpg',
+                'background11.jpg',
+                'background10.jpg',
+                'background9.jpg',
+                'background8.jpg',
             ];
             let index = 0;
             const fadeDuration = 2000;

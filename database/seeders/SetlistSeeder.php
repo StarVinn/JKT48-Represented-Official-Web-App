@@ -99,7 +99,7 @@ public function run(): void
                 'title' => 'Kira-Kira Girls',
                 'artist' => 'JKT48',
                 'production_year' => 2025,
-                'image' => 'aitakatta.jpg',
+                'image' => 'kira-kira-girls.png',
             ],
             'songs' => [
                 ['title' => 'Boneka yang Sedih (Nageki no Figure)', 'track_number' => 1, 'duration' => '04:30'],
@@ -118,6 +118,33 @@ public function run(): void
 
                 
 
+            ],
+        ],
+        [
+            'setlist' => [
+                'title' => 'Te wo Tsunaginagara',
+                'artist' => 'JKT48',
+                'production_year' => 2023,
+                'image' => 'twt.jpg',
+            ],
+            'songs' => [
+                ['title' => 'Angin Kita (Bokura No Kaze)', 'track_number' => 1, 'duration' => '04:40'],
+                ['title' => 'Mango No. 2', 'track_number' => 2, 'duration' => '03:52'],
+                ['title' => 'Sambil Menggandeng Erat Tanganku', 'track_number' => 3, 'duration' => '04:25'],
+                ['title' => 'Bel Sekolah Adalah Love Song (Chime Wa Love Song)', 'track_number' => 4, 'duration' => '03:53'],
+                ['title' => 'Glory Days', 'track_number' => 5, 'duration' => '04:56'],
+                ['title' => 'Barcode Hati Ini (Kono Mune No Barcode)', 'track_number' => 6, 'duration' => '04:41'],
+                ['title' => 'Ajak Aku Pergi Menuju ke Wimbledon', 'track_number' => 7, 'duration' => '04:12'],
+                ['title' => 'Sang Pianis Hujan (Ame No Pianist)', 'track_number' => 8, 'duration' => '04:38'],
+                ['title' => 'Keberadaan Cokelat Itu (Choco no Yukue)', 'track_number' => 9, 'duration' => '04:47'],
+                ['title' => 'Innocence', 'track_number' => 10, 'duration' => '04:12'],
+                ['title' => 'Romance Rocket', 'track_number' => 11, 'duration' => '05:03'],
+                ['title' => 'Arah Sang Cinta dan Balasannya (Koi No Keikou To Taisaku)', 'track_number' => 12, 'duration' => '04:33'],
+                ['title' => 'Aku Sangat Suka (Daisuki)', 'track_number' => 13, 'duration' => '04:17'],
+                ['title' => 'Tali Persahabatan (Rope No Yuujoo)', 'track_number' => 14, 'duration' => '03:37'],
+                ['title' => 'Malam Hari Selasa, Pagi Hari Rabu', 'track_number' => 15, 'duration' => '04:37'],
+                ['title' => 'Di Tempat Yang Jauh Pun', 'track_number' => 16, 'duration' => '05:53'],
+                
             ],
         ],
     ];
