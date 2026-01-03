@@ -151,8 +151,8 @@ public function run(): void
             'setlist' => [
                 'title' => 'Cara Meminum Ramune',
                 'artist' => 'JKT48',
-                'production_year' => 2023,
-                'image' => 'twt.jpg',
+                'production_year' => 2020,
+                'image' => 'ramune.jpg',
             ],
             'songs' => [
                 ['title' => 'Pertanda (Kizashi)', 'track_number' => 1, 'duration' => '04:16'],
@@ -172,6 +172,32 @@ public function run(): void
                 ['title' => '16 Warna Krayon Mimpi (16iro no Yume Crayon)', 'track_number' => 15, 'duration' => '03:22'],
                 ['title' => 'Cara Meminum Ramune (Ramune no Nomikata)', 'track_number' => 16, 'duration' => '04:34'],
                 
+            ],
+        ],
+        [
+            'setlist' => [
+                'title' => 'Pertaruhan Cinta',
+                'artist' => 'JKT48',
+                'production_year' => 2025,
+                'image' => 'pertaruhan-cinta.jpg',
+            ],
+            'songs' => [
+                ['title' => 'GO AND FIGHT', 'track_number' => 1, 'duration' => '03:31'],
+                ['title' => 'Wish You', 'track_number' => 2, 'duration' => '03:31'],
+                ['title' => 'City Lights', 'track_number' => 3, 'duration' => '03:48'],
+                ['title' => 'Bunga yang Kan Mekar suatu Saat', 'track_number' => 4, 'duration' => '04:04'],
+                ['title' => 'Dai Dai Dai', 'track_number' => 5, 'duration' => '03:35'],
+                ['title' => 'Sahabat atau Cinta', 'track_number' => 6, 'duration' => '04:07'],
+                ['title' => 'Onyx', 'track_number' => 7, 'duration' => '03:36'],
+                ['title' => 'Percik Kecil (Theater Version)', 'track_number' => 8, 'duration' => '03:36'],
+                ['title' => 'Raja Hati', 'track_number' => 9, 'duration' => '03:52'],
+                ['title' => "Beginner's Gamble", 'track_number' => 10, 'duration' => '04:19'],
+                ['title' => 'Ada Aku!', 'track_number' => 11, 'duration' => '04:27'],
+                ['title' => 'Dahulu', 'track_number' => 12, 'duration' => '03:26'],
+                ['title' => 'Dream', 'track_number' => 13, 'duration' => '02:53'],
+                ['title' => 'Double Standard', 'track_number' => 14, 'duration' => '03:23'],
+                ['title' => 'Cinta di Garis Horizon', 'track_number' => 15, 'duration' => '04:39'],
+                ['title' => 'Sampai Jumpa Lagi', 'track_number' => 16, 'duration' => '03:19'],
                 
             ],
         ],
