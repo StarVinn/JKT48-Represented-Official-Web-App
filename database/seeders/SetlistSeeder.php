@@ -147,6 +147,34 @@ public function run(): void
                 
             ],
         ],
+        [
+            'setlist' => [
+                'title' => 'Cara Meminum Ramune',
+                'artist' => 'JKT48',
+                'production_year' => 2023,
+                'image' => 'twt.jpg',
+            ],
+            'songs' => [
+                ['title' => 'Pertanda (Kizashi)', 'track_number' => 1, 'duration' => '04:16'],
+                ['title' => 'Schoolyards Puppy (Koutei no Koinu)', 'track_number' => 2, 'duration' => '04:56'],
+                ['title' => 'Disco di UKS (Disco Hokenshitsu)', 'track_number' => 3, 'duration' => '04:54'],
+                ['title' => 'Setlist yang Dinanti (Omatase Setlist)', 'track_number' => 4, 'duration' => '03:53'],
+                ['title' => 'Cross', 'track_number' => 5, 'duration' => '03:52'],
+                ['title' => 'Finland Miracle', 'track_number' => 6, 'duration' => '04:16'],
+                ['title' => 'Menatapmu, Sayonara (Manazashi, Sayonara)', 'track_number' => 7, 'duration' => '02:49'],
+                ['title' => 'Burung Unta si Pembohong (Usotsuki na Dachou)', 'track_number' => 8, 'duration' => '03:52'],
+                ['title' => 'Nice to Meet You!', 'track_number' => 9, 'duration' => '05:37'],
+                ['title' => 'Balerina dalam Sepi (Kodoku na Ballerina)', 'track_number' => 10, 'duration' => '04:12'],
+                ['title' => 'Sekarang Ku Bersama Denganmu (Ima Kimi to Irareru Koto)', 'track_number' => 11, 'duration' => '03:55'],
+                ['title' => 'Winning Ball', 'track_number' => 12, 'duration' => '03:27'],
+                ['title' => 'Cinta Dalam Handshake (Akushu no Ai)', 'track_number' => 13, 'duration' => '03:38'],
+                ['title' => 'Harapan Bowling (Bowling Ganbou)', 'track_number' => 14, 'duration' => '04:10'],
+                ['title' => '16 Warna Krayon Mimpi (16iro no Yume Crayon)', 'track_number' => 15, 'duration' => '03:22'],
+                ['title' => 'Cara Meminum Ramune (Ramune no Nomikata)', 'track_number' => 16, 'duration' => '04:34'],
+                
+                
+            ],
+        ],
     ];
     // untuk menambahkan dengan foreach
     foreach ($setlists as $data) {
