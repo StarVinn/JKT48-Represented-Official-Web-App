@@ -21,7 +21,7 @@ class MemberController extends Controller
     private function getCachedMembersSelect()
     {
         return Cache::remember('members_all', now()->addMinutes(1200), function () {
-            return Member::select('id','name','foto','role')->get();
+            return Member::select('id','name','foto','role')->orderBy('name', 'asc')->get();
         });
     }
 
@@ -36,7 +36,7 @@ class MemberController extends Controller
     }
     public function explore(){
     // menampilkan semua member di halaman explore
-        $members = $this->getCachedMembersSelect();
+        $members = $this->getCachedMembersSelect()->sortBy('role')->values();
         return view('explore', compact('members'));
     }
     public function getMembers(){
