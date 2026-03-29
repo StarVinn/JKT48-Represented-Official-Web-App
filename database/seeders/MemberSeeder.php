@@ -27,7 +27,7 @@ class MemberSeeder extends Seeder
             "twitter" => "AA_AlyaJKT48",
             "instagram" => "jkt48.alya_",
         ],
-        [
+        /* [
            "name"=> "Amanda Sukma",
             "tanggal_lahir"=> "2004-12-17",
             "golongan_darah"=> "O",
@@ -38,7 +38,7 @@ class MemberSeeder extends Seeder
             "foto"=> "amanda_sukma.jpg",
             "twitter" => "PS_AmandaJKT48",
             "instagram" => "jkt48.amanda.s",
-        ],
+        ], */
         [
            "name"=> "Angelina Christy",
             "tanggal_lahir"=> "2005-12-05",
