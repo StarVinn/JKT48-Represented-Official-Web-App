@@ -768,7 +768,7 @@ class MemberSeeder extends Seeder
             "tinggi_badan"=> "164",
             "nama_panggilan"=> "Maxine",
             "role"=> "trainee",
-            "foto"=> "maxine_faye.jpg",
+            "foto"=> "maxine_faye_lee.jpg",
             "twitter" => "",
             "instagram" => "",
         ],
