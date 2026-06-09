@@ -112,7 +112,7 @@ class MemberSeeder extends Seeder
             "twitter" => "Elin_JKT48",
             "instagram" => "jkt48.elin_",
         ],
-        [
+       /* [
            "name"=> "Chelsea Davina",
             "tanggal_lahir"=> "2009-12-23",
             "golongan_darah"=> "B",
@@ -123,7 +123,7 @@ class MemberSeeder extends Seeder
             "foto"=> "chelsea_davina.jpg",
             "twitter" => "DC_ChelseaJKT48",
             "instagram" => "jkt48.chelsea",
-        ],
+        ], */
         [
            "name"=> "Cornelia Vanisa",
             "tanggal_lahir"=> "2002-07-26",
